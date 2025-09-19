@@ -29,12 +29,12 @@ const HeroSlider = () => {
     {
       id: 'main',
       title: 'Participa en la',
-      subtitle: 'Agenda Legislativa Digital',
-      description: 'Tu voz importa en la construcción de las leyes que regularán la transformación digital de Guatemala. Únete al diálogo democrático más importante del siglo XXI.',
-      description: 'Tu voz importa en la construcción de las leyes que regularán la modernización del Estado guatemalteco. El MINFIN - Ministerio de Finanzas Públicas te invita a participar en este diálogo democrático fundamental.',
+      title: 'Modernización de las',
+      subtitle: 'Contrataciones Públicas',
+      description: 'Participa en la reforma más importante del sistema de compras del Estado guatemalteco. El MINFIN te invita a contribuir con tus comentarios para crear un marco legal transparente, eficiente y moderno.',
       image: Slider1,
       ctaText: 'Participa Ahora',
-      ctaLink: '/ley/infraestructuras-criticas',
+      ctaLink: '/ley/contrataciones-estado',
       secondaryCtaText: 'Ver Video Explicativo',
       secondaryCtaLink: '/recursos',
       stats: [

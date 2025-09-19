@@ -25,7 +25,7 @@ export const laws: Law[] = Object.entries(lawFiles).map(([path, raw]) => {
   const { attributes } = fm(raw as string);
   const attrs = typeof attributes === 'object' && attributes !== null ? attributes : {};
   return { id, ...attrs } as Law;
-});
+}).filter(law => law.id === 'contrataciones-estado');
 
 export function getLawById(id: string): Law | undefined {
   return laws.find(law => law.id === id);

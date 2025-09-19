@@ -9,6 +9,7 @@ const Header = () => {
 
   const navigation = [
     { name: 'Inicio', href: '/' },
+    { name: 'La Reforma', href: '/ley/contrataciones-estado' },
     { name: 'Preguntas Frecuentes', href: '/faq' },
     { name: 'Calendario', href: '/calendario' },
     { name: 'Recursos', href: '/recursos' },

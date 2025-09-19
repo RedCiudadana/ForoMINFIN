@@ -122,10 +122,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Participación en Números
+              Participación Ciudadana en la Reforma
             </h2>
             <p className="text-xl text-gray-600">
-              El impacto de la participación ciudadana en tiempo real
+              Tu participación es clave para modernizar las contrataciones públicas
             </p>
             <div className="flex justify-center my-6">
               <img src={Linea}/>
@@ -134,83 +134,76 @@ const Home = () => {
 
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <LawStatsWrapper lawId="infraestructuras-criticas">
-              {(infraStats) => (
-                <LawStatsWrapper lawId="proteccion-datos">
-                  {(dataStats) => (
-                    <LawStatsWrapper lawId="ciberseguridad">
-                      {(cyberStats) => {
-                        const totalComments = infraStats.totalComments + dataStats.totalComments + cyberStats.totalComments;
-                        const totalParticipants = infraStats.uniqueParticipants + dataStats.uniqueParticipants + cyberStats.uniqueParticipants;
-                        const totalExperts = infraStats.expertComments + dataStats.expertComments + cyberStats.expertComments;
+            <LawStatsWrapper lawId="contrataciones-estado">
+              {(contractStats) => {
+                const totalComments = contractStats.totalComments;
+                const totalParticipants = contractStats.uniqueParticipants;
+                const totalExperts = contractStats.expertComments;
                         
-                        return (
-                          <>
-                            {[
-                              {
-                                value: totalComments,
-                                label: 'Comentarios ciudadanos',
-                                description: 'Aportes constructivos recibidos',
-                                color: 'blue',
-                                trend: '+12% esta semana'
-                              },
-                              {
-                                value: totalParticipants,
-                                label: 'Participantes activos',
-                                description: 'Ciudadanos comprometidos',
-                                color: 'blue',
-                                trend: '+8% esta semana'
-                              },
-                              {
-                                value: 45,
-                                label: 'Días para participar',
-                                description: 'Tiempo restante del proceso',
-                                color: 'blue',
-                                trend: 'Hasta septiembre 2024'
-                              },
-                              {
-                                value: totalExperts,
-                                label: 'Aportes de expertos',
-                                description: 'Comentarios especializados',
-                                color: 'blue',
-                                trend: '+15% esta semana'
-                              }
-                            ].map((stat, index) => (
-                              <AnimatedSection key={index} delay={index * 100}>
-                                <div className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                                  <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${
-                                    stat.color === 'blue' ? 'bg-blue-500' :
-                                    stat.color === 'green' ? 'bg-green-100' :
-                                    stat.color === 'orange' ? 'bg-orange-100' : 'bg-purple-100'
-                                  }`}>
-                                    <span className={`text-2xl font-bold ${
-                                      stat.color === 'blue' ? 'text-blue-800' :
-                                      stat.color === 'green' ? 'text-green-600' :
-                                      stat.color === 'orange' ? 'text-orange-600' : 'text-purple-600'
-                                    }`}>
-                                      {stat.value}
-                                    </span>
-                                  </div>
-                                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                                    {stat.label}
-                                  </h3>
-                                  <p className="text-gray-600 text-sm mb-2">{stat.description}</p>
-                                  <span className={`text-xs font-medium px-2 py-1 rounded-full ${
-                                    stat.color === 'blue' ? 'bg-blue-50 text-blue-800' :
-                                    stat.color === 'green' ? 'bg-green-50 text-green-700' :
-                                    stat.color === 'orange' ? 'bg-orange-50 text-orange-700' : 'bg-purple-50 text-purple-700'
-                                  }`}>
-                                    {stat.trend}
-                                  </span>
-                                </div>
-                              </AnimatedSection>
-                            ))}
-                          </>
-                        );
-                      }}
-                    </LawStatsWrapper>
-                  )}
-                </LawStatsWrapper>
+                return (
+                  <>
+                    {[
+                      {
+                        value: totalComments,
+                        label: 'Comentarios recibidos',
+                        description: 'Aportes sobre la reforma',
+                        color: 'blue',
+                        trend: '+12% esta semana'
+                      },
+                      {
+                        value: totalParticipants,
+                        label: 'Participantes',
+                        description: 'Ciudadanos y organizaciones',
+                        color: 'blue',
+                        trend: '+8% esta semana'
+                      },
+                      {
+                        value: 18,
+                        label: 'Artículos propuestos',
+                        description: 'Para modernizar las compras',
+                        color: 'blue',
+                        trend: '6 capítulos temáticos'
+                      },
+                      {
+                        value: totalExperts,
+                        label: 'Expertos participando',
+                        description: 'Especialistas en contratación',
+                        color: 'blue',
+                        trend: '+15% esta semana'
+                      }
+                    ].map((stat, index) => (
+                      <AnimatedSection key={index} delay={index * 100}>
+                        <div className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                          <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${
+                            stat.color === 'blue' ? 'bg-blue-500' :
+                            stat.color === 'green' ? 'bg-green-100' :
+                            stat.color === 'orange' ? 'bg-orange-100' : 'bg-purple-100'
+                          }`}>
+                            <span className={`text-2xl font-bold ${
+                              stat.color === 'blue' ? 'text-blue-800' :
+                              stat.color === 'green' ? 'text-green-600' :
+                              stat.color === 'orange' ? 'text-orange-600' : 'text-purple-600'
+                            }`}>
+                              {stat.value}
+                            </span>
+                          </div>
+                          <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                            {stat.label}
+                          </h3>
+                          <p className="text-gray-600 text-sm mb-2">{stat.description}</p>
+                          <span className={`text-xs font-medium px-2 py-1 rounded-full ${
+                            stat.color === 'blue' ? 'bg-blue-50 text-blue-800' :
+                            stat.color === 'green' ? 'bg-green-50 text-green-700' :
+                            stat.color === 'orange' ? 'bg-orange-50 text-orange-700' : 'bg-purple-50 text-purple-700'
+                          }`}>
+                            {stat.trend}
+                          </span>
+                        </div>
+                      </AnimatedSection>
+                    ))}
+                  </>
+                );
+              }}
               )}
             </LawStatsWrapper>
           </div>
@@ -222,10 +215,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Iniciativas de Ley Abiertas a Consulta
+              Reforma a la Ley de Contrataciones Públicas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explora cada propuesta legislativa impulsada por el MINFIN, lee los artículos y comparte tus comentarios para contribuir a la construcción de mejores leyes para Guatemala
+              Una propuesta integral para modernizar el sistema de compras del Estado guatemalteco, promoviendo transparencia, eficiencia y participación ciudadana en el control de recursos públicos
             </p>
             <div className="flex justify-center my-6">
               <img src={Linea}/>
@@ -233,28 +226,132 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {laws.map((law, index) => {
+            {laws.filter(law => law.id === 'contrataciones-estado').map((law, index) => {
               const IconComponent = getIconComponent(law.icon);
               
               return (
-                <AnimatedSection key={law.id} delay={index * 200}>
+                <AnimatedSection key={law.id} delay={200} className="lg:col-span-3">
                   <LawStatsWrapper lawId={law.id}>
                     {(stats) => (
-                      <EnhancedCard
-                        title={law.title}
-                        description={law.shortDescription}
-                        image={lawImages[law.id as keyof typeof lawImages]}
-                        link={`/ley/${law.id}`}
-                        stats={{
-                          comments: stats.totalComments,
-                          participants: stats.uniqueParticipants,
-                          daysLeft: 45
-                        }}
-                        color={law.color}
-                        icon={IconComponent}
-                      />
+                      <div className="max-w-4xl mx-auto">
+                        <EnhancedCard
+                          title={law.title}
+                          description={law.shortDescription}
+                          image={lawImages[law.id as keyof typeof lawImages]}
+                          link={`/ley/${law.id}`}
+                          stats={{
+                            comments: stats.totalComments,
+                            participants: stats.uniqueParticipants,
+                            daysLeft: 45
+                          }}
+                          color={law.color}
+                          icon={IconComponent}
+                        />
+                      </div>
                     )}
                   </LawStatsWrapper>
+                </AnimatedSection>
+              );
+            })}
+          </div>
+        </div>
+      </AnimatedSection>
+      {/* Key Features Section */}
+      <AnimatedSection className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Principales Reformas Propuestas
+            </h2>
+            <p className="text-xl text-gray-600">
+              Conoce los aspectos clave que transformarán las contrataciones públicas
+            </p>
+            <div className="flex justify-center my-6">
+              <img src={Linea}/>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Portal Único Digital',
+                description: 'Sistema electrónico unificado para todas las contrataciones del Estado con estándares internacionales',
+                icon: Network,
+                color: 'blue',
+                features: ['Datos abiertos (OCDS)', 'Acceso público', 'Interoperabilidad']
+              },
+              {
+                title: 'Transparencia Total',
+                description: 'Publicación obligatoria de toda la información en formatos reutilizables y accesibles',
+                icon: Shield,
+                color: 'green',
+                features: ['Alertas ciudadanas', 'Contratos abiertos', 'Seguimiento en tiempo real']
+              },
+              {
+                title: 'Modernización Tecnológica',
+                description: 'Implementación de herramientas digitales para agilizar y mejorar los procesos',
+                icon: Fingerprint,
+                color: 'purple',
+                features: ['Subastas electrónicas', 'Firma digital', 'Catálogo electrónico']
+              },
+              {
+                title: 'Fortalecimiento MIPYMES',
+                description: 'Garantía de participación para micro, pequeñas y medianas empresas',
+                icon: Users,
+                color: 'orange',
+                features: ['Cuotas mínimas', 'Procesos simplificados', 'Capacitación especializada']
+              },
+              {
+                title: 'Control y Sanciones',
+                description: 'Mecanismos robustos para prevenir y sancionar irregularidades',
+                icon: CheckCircle,
+                color: 'red',
+                features: ['Auditoría digital', 'Inhabilitación rápida', 'Lista negra nacional']
+              },
+              {
+                title: 'Profesionalización',
+                description: 'Formación especializada para funcionarios responsables de compras públicas',
+                icon: FileText,
+                color: 'indigo',
+                features: ['Registro de compradores', 'Capacitación obligatoria', 'Certificación profesional']
+              }
+            ].map((feature, index) => {
+              const IconComponent = feature.icon;
+              const getColorClasses = (color: string) => {
+                switch (color) {
+                  case 'blue': return { bg: 'bg-blue-500', text: 'text-blue-800', border: 'border-blue-200' };
+                  case 'green': return { bg: 'bg-green-100', text: 'text-green-800', border: 'border-green-200' };
+                  case 'purple': return { bg: 'bg-purple-100', text: 'text-purple-800', border: 'border-purple-200' };
+                  case 'orange': return { bg: 'bg-orange-100', text: 'text-orange-800', border: 'border-orange-200' };
+                  case 'red': return { bg: 'bg-red-100', text: 'text-red-800', border: 'border-red-200' };
+                  default: return { bg: 'bg-indigo-100', text: 'text-indigo-800', border: 'border-indigo-200' };
+                }
+              };
+              const colors = getColorClasses(feature.color);
+              
+              return (
+                <AnimatedSection key={index} delay={index * 100}>
+                  <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    <div className={`${colors.bg} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4`}>
+                      <IconComponent className={`h-8 w-8 ${colors.text}`} />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600 text-center mb-4 leading-relaxed">
+                      {feature.description}
+                    </p>
+                    <div className={`${colors.bg} rounded-lg p-4 ${colors.border} border`}>
+                      <ul className="space-y-2">
+                        {feature.features.map((item, itemIndex) => (
+                          <li key={itemIndex} className="flex items-center text-sm">
+                            <CheckCircle className={`h-4 w-4 ${colors.text} mr-2 flex-shrink-0`} />
+                            <span className="text-gray-700">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 </AnimatedSection>
               );
             })}
@@ -267,10 +364,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Cronograma del Proceso Participativo - MINFIN
+              Cronograma de la Reforma - MINFIN
             </h2>
             <p className="text-xl text-gray-600">
-              Conoce las fases del proceso impulsado por el Ministerio de Finanzas Públicas y cómo puedes participar en cada etapa
+              Fases del proceso de reforma a la Ley de Contrataciones Públicas impulsado por el MINFIN
             </p>
             <div className="flex justify-center my-6">
               <img src={Linea}/>
@@ -286,10 +383,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              ¿Cómo Participar en el Proceso?
+              ¿Cómo Participar en la Reforma?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Sigue estos pasos sencillos para hacer que tu voz sea escuchada en la construcción de las leyes que nos afectarán a todos
+              Participa activamente en la modernización del sistema de contrataciones públicas de Guatemala
             </p>
             <div className="flex justify-center my-6">
               <img src={Linea}/>
@@ -406,7 +503,7 @@ const Home = () => {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/ley/infraestructuras-criticas"
+                to="/ley/contrataciones-estado"
                 className="group bg-blue-800 hover:bg-blue-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 hover:shadow-xl"
               >
                 Comenzar a Participar
