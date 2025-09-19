@@ -41,39 +41,6 @@ const HeroSlider = () => {
         { label: 'Participantes', value: '300+', icon: Users },
         { label: 'Días restantes', value: '45', icon: Calendar }
       ]
-    },
-    {
-      id: 'infraestructuras',
-      title: 'Protección de',
-      subtitle: 'Infraestructuras Críticas',
-      description: 'Ayúdanos a definir cómo proteger los sistemas esenciales que mantienen funcionando nuestro país: energía, telecomunicaciones, transporte y más.',
-      image: Slider2,
-      ctaText: 'Revisar Propuesta',
-      ctaLink: '/ley/infraestructuras-criticas',
-      secondaryCtaText: 'Descargar PDF',
-      secondaryCtaLink: '/docs/infraestructuras-criticas.pdf'
-    },
-    {
-      id: 'datos',
-      title: 'Protección de',
-      subtitle: 'Datos Personales',
-      description: 'Contribuye a crear una ley que proteja tu privacidad y derechos digitales. Tu información personal merece la mejor protección legal.',
-      image: Slider1,
-      ctaText: 'Comentar Artículos',
-      ctaLink: '/ley/proteccion-datos',
-      secondaryCtaText: 'Conocer más',
-      secondaryCtaLink: '/recursos'
-    },
-    {
-      id: 'ciberseguridad',
-      title: 'Ciberseguridad',
-      subtitle: 'Nacional',
-      description: 'Participa en la creación del marco institucional que protegerá a Guatemala de las amenazas cibernéticas. Tu experiencia puede marcar la diferencia.',
-      image: Slider2,
-      ctaText: 'Explorar Iniciativa',
-      ctaLink: '/ley/ciberseguridad',
-      secondaryCtaText: 'Ver Cronograma',
-      secondaryCtaLink: '/calendario'
     }
   ];
 

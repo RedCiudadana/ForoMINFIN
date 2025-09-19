@@ -233,7 +233,7 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {laws.map((law, index) => {
+            {laws.slice(0, 1).map((law, index) => {
               const IconComponent = getIconComponent(law.icon);
               
               return (
