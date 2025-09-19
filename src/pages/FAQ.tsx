@@ -8,6 +8,7 @@ const FAQ = () => {
     {
       question: '¿Cómo se usarán mis comentarios?',
       answer: 'Todos los comentarios ciudadanos serán revisados por el equipo técnico del Congreso y los diputados ponentes de cada iniciativa. Los aportes más relevantes y técnicamente viables serán incorporados en las versiones finales de las leyes antes de su presentación al pleno del Congreso.'
+      answer: 'Todos los comentarios ciudadanos serán revisados por el equipo técnico del MINFIN - Ministerio de Finanzas Públicas y los especialistas de cada área. Los aportes más relevantes y técnicamente viables serán incorporados en las versiones finales de las propuestas antes de su presentación formal.'
     },
     {
       question: '¿Qué es una ley de ciberseguridad?',
@@ -35,7 +36,7 @@ const FAQ = () => {
     },
     {
       question: '¿Cómo sabré si mi comentario fue considerado?',
-      answer: 'Al final del proceso, publicaremos un informe de sistematización que mostrará cómo los comentarios ciudadanos influyeron en las versiones finales de las leyes. También enviaremos resúmenes por correo electrónico a quienes se hayan registrado.'
+      answer: 'Al final del proceso, el MINFIN publicará un informe de sistematización que mostrará cómo los comentarios ciudadanos influyeron en las versiones finales de las propuestas. También enviaremos resúmenes por correo electrónico a quienes se hayan registrado.'
     },
     {
       question: '¿Puedo comentar en nombre de una organización?',

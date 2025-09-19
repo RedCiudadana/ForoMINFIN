@@ -24,11 +24,11 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-2">
                   <Mail className="h-4 w-4 text-white" />
-                  <span className="text-sm">participacion@congreso.gob.gt</span>
+                  <span className="text-sm">participacion@minfin.gob.gt</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Phone className="h-4 w-4 text-white" />
-                  <span className="text-sm">+502 2422-0000</span>
+                  <span className="text-sm">+502 2248-0000</span>
                 </div>
               </div>
             </div>
@@ -83,10 +83,10 @@ const Footer = () => {
 
           <div className="mt-4 pt-4 text-center">
             <p className="text-sm text-white">
-              © 2024 Congreso de la República de Guatemala. Todos los derechos reservados.
+              © 2024 MINFIN - Ministerio de Finanzas Públicas de Guatemala. Todos los derechos reservados.
             </p>
             <p className="text-xs text-white mt-2">
-              Foro Parlamentario de Transformación Digital
+              Foro de Participación Ciudadana - MINFIN
             </p>
           </div>
         </div>

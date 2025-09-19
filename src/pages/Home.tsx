@@ -225,7 +225,7 @@ const Home = () => {
               Iniciativas de Ley Abiertas a Consulta
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explora cada propuesta legislativa, lee los artículos y comparte tus comentarios para contribuir a la construcción de mejores leyes
+              Explora cada propuesta legislativa impulsada por el MINFIN, lee los artículos y comparte tus comentarios para contribuir a la construcción de mejores leyes para Guatemala
             </p>
             <div className="flex justify-center my-6">
               <img src={Linea}/>
@@ -233,7 +233,7 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {laws.slice(0, 1).map((law, index) => {
+            {laws.map((law, index) => {
               const IconComponent = getIconComponent(law.icon);
               
               return (
@@ -267,10 +267,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Cronograma del Proceso Participativo
+              Cronograma del Proceso Participativo - MINFIN
             </h2>
             <p className="text-xl text-gray-600">
-              Conoce las fases del proceso y cómo puedes participar en cada etapa
+              Conoce las fases del proceso impulsado por el Ministerio de Finanzas Públicas y cómo puedes participar en cada etapa
             </p>
             <div className="flex justify-center my-6">
               <img src={Linea}/>
@@ -358,9 +358,9 @@ const Home = () => {
                   Tu Participación Importa
                 </h3>
                 <p className="text-gray-600 max-w-3xl mx-auto mb-6 leading-relaxed">
-                  Cada comentario que envíes será revisado por el equipo técnico del Congreso y los diputados ponentes. 
-                  Los aportes más relevantes y técnicamente viables serán incorporados en las versiones finales de las leyes 
-                  antes de su presentación al pleno del Congreso.
+                  Cada comentario que envíes será revisado por el equipo técnico del MINFIN y los especialistas del Ministerio de Finanzas Públicas. 
+                  Los aportes más relevantes y técnicamente viables serán incorporados en las versiones finales de las propuestas 
+                  antes de su presentación formal.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                   <div className="text-center">
@@ -368,7 +368,7 @@ const Home = () => {
                       <MessageSquare className="h-8 w-8 text-blue-800" />
                     </div>
                     <h4 className="font-semibold text-gray-900 mb-2">Comentarios Revisados</h4>
-                    <p className="text-sm text-gray-600">Todos los comentarios son analizados por expertos</p>
+                    <p className="text-sm text-gray-600">Todos los comentarios son analizados por expertos del MINFIN</p>
                   </div>
                   <div className="text-center">
                     <div className="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -399,7 +399,7 @@ const Home = () => {
               ¿Listo para hacer oír tu voz?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Tu participación es fundamental para construir leyes que realmente sirvan a Guatemala. Únete al diálogo democrático más importante de nuestra era digital.
+              Tu participación es fundamental para construir propuestas que realmente sirvan a Guatemala. El MINFIN te invita a unirte a este diálogo democrático para fortalecer las finanzas públicas del país.
             </p>
             <div className="flex justify-center my-6">
               <img src={Linea}/>
