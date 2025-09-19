@@ -37,6 +37,8 @@ const Header = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3 group">
               <img className="h-10 w-auto" src="https://www.minfin.gob.gt/images/img_portal/MINFIN-2024-2028_AZUL_01.png" alt="MINFIN Logo"/>
+              <div className="h-8 w-px bg-gray-300 mx-3"></div>
+              <img className="h-8 w-auto" src="https://www.redciudadana.org/assets/img/red/LOGO-RED_NEGRO.png" alt="Red Ciudadana Logo"/>
             </Link>
           </div>
 
