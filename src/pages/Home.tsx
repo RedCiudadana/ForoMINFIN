@@ -416,17 +416,6 @@ const Home = () => {
         </div>
       </AnimatedSection>
 
-      {/* Footer */}
-      <AnimatedSection className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="max-w-3xl mx-auto">
-            <div className="flex flex-row justify-center items-center gap-8">
-              <img src={Footer1} className="h-20 w-auto" />
-              <img src={Footer2} className="h-20 w-auto" />
-            </div>
-          </div>
-        </div>
-      </AnimatedSection>
     </div>
   );
 };
