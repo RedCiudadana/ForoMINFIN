@@ -98,11 +98,6 @@ const HeroSlider = () => {
             {/* Text Content */}
             <div className="text-white space-y-8">
               <div className="space-y-4">
-                <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-white border border-white/20">
-                  <Calendar className="h-4 w-4 mr-2" />
-                  Proceso abierto hasta septiembre 2024
-                </div>
-                
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
                   <span className="block">{currentSlideData.title}</span>
                   <span className="block text-white mt-2">
