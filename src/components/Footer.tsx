@@ -1,6 +1,5 @@
 import React from 'react';
 import { Mail, Phone, ExternalLink, Facebook, Twitter, Youtube } from 'lucide-react';
-import Logo from  '../assets/footer/LOGO-RED_BLANCO.png';
 import Redes1 from '../assets/footer/REDES-01.png';
 import Redes2 from '../assets/footer/REDES-02.png';
 import Redes3 from '../assets/footer/REDES-03.png';
@@ -16,7 +15,7 @@ const Footer = () => {
 
             {/* Logo */}
             <div>
-              <img src={Logo}/>
+              <img src="https://www.minfin.gob.gt/images/img_portal/MINFIN-2024-2028_AZUL_01.png" alt="MINFIN Logo" className="h-16 w-auto"/>
             </div>
 
             {/* Información de Contacto */}
