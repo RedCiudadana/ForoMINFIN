@@ -1,7 +1,5 @@
 import React, { useState, useRef } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
-import { Send, User, Mail, Tag, Loader2, Shield } from 'lucide-react';
-import { useRecaptcha } from './RecaptchaProvider';
+import { Send, User, Mail, Tag, Loader2 } from 'lucide-react';
 
 interface CommentFormProps {
   onSubmit: (data: {
@@ -10,7 +8,6 @@ interface CommentFormProps {
     content: string;
     is_expert?: boolean;
     tags?: string[];
-    recaptcha_token: string;
   }) => Promise<void>;
   isGeneral?: boolean;
   loading?: boolean;
@@ -21,9 +18,6 @@ const CommentForm: React.FC<CommentFormProps> = ({
   isGeneral = false,
   loading = false
 }) => {
-  const { siteKey } = useRecaptcha();
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
-  
   const [formData, setFormData] = useState({
     author_name: '',
     author_email: '',
@@ -33,23 +27,7 @@ const CommentForm: React.FC<CommentFormProps> = ({
   });
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
-  const [recaptchaError, setRecaptchaError] = useState<string | null>(null);
 
-  const handleRecaptchaChange = (token: string | null) => {
-    setRecaptchaToken(token);
-    setRecaptchaError(null);
-  };
-
-  const handleRecaptchaExpired = () => {
-    setRecaptchaToken(null);
-    setRecaptchaError('El captcha ha expirado. Por favor, complétalo nuevamente.');
-  };
-
-  const handleRecaptchaError = () => {
-    setRecaptchaToken(null);
-    setRecaptchaError('Error al cargar el captcha. Por favor, recarga la página.');
-  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -59,13 +37,7 @@ const CommentForm: React.FC<CommentFormProps> = ({
       return;
     }
 
-    if (!recaptchaToken) {
-      setRecaptchaError('Por favor, completa la verificación de seguridad.');
-      return;
-    }
-
     setIsSubmitting(true);
-    setRecaptchaError(null);
 
     try {
       const tags = formData.tags
@@ -78,8 +50,7 @@ const CommentForm: React.FC<CommentFormProps> = ({
         author_email: formData.author_email || undefined,
         content: formData.content,
         is_expert: formData.is_expert,
-        tags: tags.length > 0 ? tags : undefined,
-        recaptcha_token: recaptchaToken
+        tags: tags.length > 0 ? tags : undefined
       });
 
       // Reset form but keep email for convenience
@@ -91,22 +62,10 @@ const CommentForm: React.FC<CommentFormProps> = ({
         is_expert: false
       }));
       setShowAdvanced(false);
-      setRecaptchaToken(null);
-      
-      // Reset reCAPTCHA
-      if (recaptchaRef.current) {
-        recaptchaRef.current.reset();
-      }
       
     } catch (error) {
       console.error('Error submitting comment:', error);
       alert('Error al enviar el comentario. Por favor, inténtalo de nuevo.');
-      
-      // Reset reCAPTCHA on error
-      if (recaptchaRef.current) {
-        recaptchaRef.current.reset();
-      }
-      setRecaptchaToken(null);
     } finally {
       setIsSubmitting(false);
     }
@@ -122,7 +81,6 @@ const CommentForm: React.FC<CommentFormProps> = ({
   const isFormValid = formData.content.trim() && 
                      formData.author_name.trim() && 
                      formData.content.length >= 10 && 
-                     recaptchaToken &&
                      !isSubmitting && 
                      !loading;
 
@@ -259,40 +217,11 @@ const CommentForm: React.FC<CommentFormProps> = ({
           </div>
         )}
 
-        {/* reCAPTCHA */}
-        <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-          <div className="flex items-center mb-3">
-            <Shield className="h-5 w-5 text-blue-600 mr-2" />
-            <h4 className="font-medium text-gray-900">Verificación de seguridad *</h4>
-          </div>
-          <p className="text-sm text-gray-600 mb-3">
-            Para prevenir spam y proteger la calidad del diálogo, por favor completa la verificación:
-          </p>
-          
-          <div className="flex justify-center">
-            <ReCAPTCHA
-              ref={recaptchaRef}
-              sitekey={siteKey}
-              onChange={handleRecaptchaChange}
-              onExpired={handleRecaptchaExpired}
-              onError={handleRecaptchaError}
-              theme="light"
-              size="normal"
-            />
-          </div>
-          
-          {recaptchaError && (
-            <div className="mt-2 text-sm text-red-600 bg-red-50 border border-red-200 rounded-md p-2">
-              {recaptchaError}
-            </div>
-          )}
-        </div>
 
         {/* Submit Button */}
         <div className="flex items-center justify-between pt-4">
           <div className="text-xs text-gray-500">
             <p>Tu comentario será público y contribuirá al análisis legislativo.</p>
-            <p>Al enviar, aceptas que tu comentario sea revisado por moderadores.</p>
           </div>
           
           <button

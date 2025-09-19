@@ -52,13 +52,8 @@ export const useComments = (lawId: string, articleId?: string, isGeneral?: boole
     content: string;
     is_expert?: boolean;
     tags?: string[];
-    recaptcha_token: string;
   }) => {
     try {
-      // Verify reCAPTCHA token on the client side (basic validation)
-      if (!commentData.recaptcha_token) {
-        throw new Error('reCAPTCHA verification required');
-      }
 
       const newComment = await commentService.addComment({
         law_id: lawId,
@@ -115,13 +110,8 @@ export const useComments = (lawId: string, articleId?: string, isGeneral?: boole
     author_email: string;
     content: string;
     is_moderator?: boolean;
-    recaptcha_token: string;
   }) => {
     try {
-      // Verify reCAPTCHA token on the client side (basic validation)
-      if (!replyData.recaptcha_token) {
-        throw new Error('reCAPTCHA verification required');
-      }
 
       const newReply = await commentService.addReply({
         comment_id: commentId,

@@ -1,9 +1,7 @@
 import React, { useState, useRef } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
-import { ThumbsUp, MessageSquare, User, Crown, Reply, Flag, Share2, Loader2, Mail, Shield } from 'lucide-react';
+import { ThumbsUp, MessageSquare, User, Crown, Reply, Flag, Share2, Loader2, Mail } from 'lucide-react';
 import { useComments } from '../hooks/useComments';
 import { CommentReply } from '../lib/supabase';
-import { useRecaptcha } from './RecaptchaProvider';
 
 interface CommentSectionProps {
   lawId: string;
@@ -12,9 +10,7 @@ interface CommentSectionProps {
 }
 
 const CommentSection: React.FC<CommentSectionProps> = ({ lawId, articleId, isGeneral = false }) => {
-  const { siteKey } = useRecaptcha();
   const { comments, replies, loading, userLikes, likeComment, addReply } = useComments(lawId, articleId, isGeneral);
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
   
   const [replyingTo, setReplyingTo] = useState<string | null>(null);
   const [replyData, setReplyData] = useState({
@@ -24,23 +20,6 @@ const CommentSection: React.FC<CommentSectionProps> = ({ lawId, articleId, isGen
   });
   const [submittingReply, setSubmittingReply] = useState(false);
   const [sortBy, setSortBy] = useState<'newest' | 'oldest' | 'most-liked'>('newest');
-  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
-  const [recaptchaError, setRecaptchaError] = useState<string | null>(null);
-
-  const handleRecaptchaChange = (token: string | null) => {
-    setRecaptchaToken(token);
-    setRecaptchaError(null);
-  };
-
-  const handleRecaptchaExpired = () => {
-    setRecaptchaToken(null);
-    setRecaptchaError('El captcha ha expirado. Por favor, complétalo nuevamente.');
-  };
-
-  const handleRecaptchaError = () => {
-    setRecaptchaToken(null);
-    setRecaptchaError('Error al cargar el captcha. Por favor, recarga la página.');
-  };
 
   const handleLikeComment = async (commentId: string) => {
     try {
@@ -53,8 +32,6 @@ const CommentSection: React.FC<CommentSectionProps> = ({ lawId, articleId, isGen
 
   const startReply = (commentId: string) => {
     setReplyingTo(commentId);
-    setRecaptchaToken(null);
-    setRecaptchaError(null);
     setReplyData({
       author_name: '',
       author_email: '',
@@ -68,18 +45,11 @@ const CommentSection: React.FC<CommentSectionProps> = ({ lawId, articleId, isGen
       return;
     }
 
-    if (!recaptchaToken) {
-      setRecaptchaError('Por favor, completa la verificación de seguridad.');
-      return;
-    }
-    
     setSubmittingReply(true);
-    setRecaptchaError(null);
     
     try {
       await addReply(commentId, {
-        ...replyData,
-        recaptcha_token: recaptchaToken
+        ...replyData
       });
       
       setReplyData({
@@ -88,22 +58,10 @@ const CommentSection: React.FC<CommentSectionProps> = ({ lawId, articleId, isGen
         content: ''
       });
       setReplyingTo(null);
-      setRecaptchaToken(null);
-      
-      // Reset reCAPTCHA
-      if (recaptchaRef.current) {
-        recaptchaRef.current.reset();
-      }
       
     } catch (error) {
       console.error('Error adding reply:', error);
       alert('Error al enviar la respuesta. Por favor, inténtalo de nuevo.');
-      
-      // Reset reCAPTCHA on error
-      if (recaptchaRef.current) {
-        recaptchaRef.current.reset();
-      }
-      setRecaptchaToken(null);
     } finally {
       setSubmittingReply(false);
     }
@@ -111,18 +69,11 @@ const CommentSection: React.FC<CommentSectionProps> = ({ lawId, articleId, isGen
 
   const cancelReply = () => {
     setReplyingTo(null);
-    setRecaptchaToken(null);
-    setRecaptchaError(null);
     setReplyData({
       author_name: '',
       author_email: '',
       content: ''
     });
-    
-    // Reset reCAPTCHA
-    if (recaptchaRef.current) {
-      recaptchaRef.current.reset();
-    }
   };
 
   const formatDate = (timestamp: string) => {
@@ -161,7 +112,6 @@ const CommentSection: React.FC<CommentSectionProps> = ({ lawId, articleId, isGen
   const isReplyFormValid = replyData.content.trim() && 
                           replyData.author_name.trim() && 
                           replyData.author_email.trim() && 
-                          recaptchaToken &&
                           !submittingReply;
 
   if (loading) {
@@ -305,7 +255,6 @@ const CommentSection: React.FC<CommentSectionProps> = ({ lawId, articleId, isGen
               <div className="mt-4 pt-4 border-t border-gray-200">
                 <div className="bg-gray-50 rounded-lg p-4 space-y-4">
                   <div className="flex items-center mb-3">
-                    <Shield className="h-5 w-5 text-blue-600 mr-2" />
                     <h4 className="font-medium text-gray-900">Responder al comentario</h4>
                   </div>
                   
@@ -358,37 +307,6 @@ const CommentSection: React.FC<CommentSectionProps> = ({ lawId, articleId, isGen
                     />
                   </div>
 
-                  {/* reCAPTCHA for replies */}
-                  <div className="bg-white rounded-md p-3 border border-gray-200">
-                    <div className="flex items-center mb-3">
-                      <Shield className="h-4 w-4 text-blue-600 mr-2" />
-                      <label className="block text-sm font-medium text-gray-700">
-                        Verificación de seguridad *
-                      </label>
-                    </div>
-                    <p className="text-sm text-gray-600 mb-3">
-                      Para prevenir spam, por favor completa la verificación:
-                    </p>
-                    
-                    <div className="flex justify-center">
-                      <ReCAPTCHA
-                        ref={recaptchaRef}
-                        sitekey={siteKey}
-                        onChange={handleRecaptchaChange}
-                        onExpired={handleRecaptchaExpired}
-                        onError={handleRecaptchaError}
-                        theme="light"
-                        size="normal"
-                      />
-                    </div>
-                    
-                    {recaptchaError && (
-                      <div className="mt-2 text-sm text-red-600 bg-red-50 border border-red-200 rounded-md p-2">
-                        {recaptchaError}
-                      </div>
-                    )}
-                  </div>
-                  
                   <div className="flex justify-end space-x-2">
                     <button
                       onClick={cancelReply}

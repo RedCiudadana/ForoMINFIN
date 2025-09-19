@@ -8,7 +8,6 @@ import FAQ from './pages/FAQ';
 import Calendar from './pages/Calendar';
 import Resources from './pages/Resources';
 import NotFound from './pages/NotFound';
-import { RecaptchaProvider } from './components/RecaptchaProvider';
 import Loader from './components/loader';
 
 function LoaderWrapper({ children }: { children: React.ReactNode }) {
@@ -34,7 +33,6 @@ function LoaderWrapper({ children }: { children: React.ReactNode }) {
 
 function App() {
   return (
-    <RecaptchaProvider>
       <Router>
         <LoaderWrapper>
           <div className="min-h-screen bg-gray-50 flex flex-col">
@@ -54,7 +52,6 @@ function App() {
           </div>
         </LoaderWrapper>
       </Router>
-    </RecaptchaProvider>
   );
 }
 
