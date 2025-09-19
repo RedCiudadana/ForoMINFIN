@@ -204,7 +204,6 @@ const Home = () => {
                   </>
                 );
               }}
-              )}
             </LawStatsWrapper>
           </div>
         </div>
