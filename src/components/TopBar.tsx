@@ -42,10 +42,9 @@ const TopBar = () => {
               href="https://redciudadana.org.gt" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center"
+              className="text-white hover:text-blue-300 transition-colors inline-flex items-center"
             >
-              redciudadana.org.gt
-              <ExternalLink className="h-3 w-3 ml-1" />
+              Red Ciudadana
             </a>
           </div>
 

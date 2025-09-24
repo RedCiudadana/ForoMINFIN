@@ -83,7 +83,7 @@ const Footer = () => {
 
           <div className="mt-4 pt-4 text-center">
             <p className="text-sm text-white">
-              © 2024 MINFIN - Ministerio de Finanzas Públicas de Guatemala. Todos los derechos reservados.
+              2025 MINFIN - Ministerio de Finanzas Públicas de Guatemala.
             </p>
             <p className="text-xs text-white mt-2">
               Foro de Participación Ciudadana - MINFIN
