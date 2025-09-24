@@ -36,7 +36,7 @@ const TopBar = () => {
           {/* Left side - Organization info */}
           <div className="flex items-center space-x-4">
             <span className="text-gray-300">
-              Una iniciativa de Red Ciudadana
+              Participa! Una herramienta de Red Ciudadana
             </span>
             <a 
               href="https://redciudadana.org.gt" 
