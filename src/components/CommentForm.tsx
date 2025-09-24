@@ -8,6 +8,7 @@ interface CommentFormProps {
     content: string;
     is_expert?: boolean;
     tags?: string[];
+    sector: string;
   }) => Promise<void>;
   isGeneral?: boolean;
   loading?: boolean;
@@ -23,7 +24,8 @@ const CommentForm: React.FC<CommentFormProps> = ({
     author_email: '',
     content: '',
     tags: '',
-    is_expert: false
+    is_expert: false,
+    sector: ''
   });
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -50,7 +52,8 @@ const CommentForm: React.FC<CommentFormProps> = ({
         author_email: formData.author_email || undefined,
         content: formData.content,
         is_expert: formData.is_expert,
-        tags: tags.length > 0 ? tags : undefined
+        tags: tags.length > 0 ? tags : undefined,
+        sector: formData.sector
       });
 
       // Reset form but keep email for convenience
@@ -59,7 +62,8 @@ const CommentForm: React.FC<CommentFormProps> = ({
         author_email: prev.author_email,
         content: '',
         tags: '',
-        is_expert: false
+        is_expert: false,
+        sector: ''
       }));
       setShowAdvanced(false);
       
@@ -80,6 +84,7 @@ const CommentForm: React.FC<CommentFormProps> = ({
 
   const isFormValid = formData.content.trim() && 
                      formData.author_name.trim() && 
+                     formData.sector.trim() && 
                      formData.content.length >= 10 && 
                      !isSubmitting && 
                      !loading;
@@ -216,6 +221,27 @@ const CommentForm: React.FC<CommentFormProps> = ({
             </div>
           </div>
         )}
+
+        {/* Sector Selection */}
+        <div>
+          <label htmlFor="sector" className="block text-sm font-medium text-gray-700 mb-1">
+            Sector *
+          </label>
+          <select
+            id="sector"
+            value={formData.sector}
+            onChange={(e) => handleInputChange('sector', e.target.value)}
+            className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            required
+            disabled={isSubmitting || loading}
+          >
+            <option value="">Selecciona tu sector</option>
+            <option value="sector-ejecutivo">Sector Ejecutivo</option>
+            <option value="sector-privado">Sector Privado</option>
+            <option value="sociedad-civil">Sociedad Civil</option>
+            <option value="academia">Academia</option>
+          </select>
+        </div>
 
 
         {/* Submit Button */}

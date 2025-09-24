@@ -52,6 +52,7 @@ export const useComments = (lawId: string, articleId?: string, isGeneral?: boole
     content: string;
     is_expert?: boolean;
     tags?: string[];
+    sector: string;
   }) => {
     try {
 
@@ -63,7 +64,8 @@ export const useComments = (lawId: string, articleId?: string, isGeneral?: boole
         author_email: commentData.author_email,
         content: commentData.content,
         is_expert: commentData.is_expert,
-        tags: commentData.tags
+        tags: commentData.tags,
+        sector: commentData.sector
       });
 
       // Add the new comment to the list with default stats

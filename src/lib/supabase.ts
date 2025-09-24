@@ -115,6 +115,7 @@ export const commentService = {
     is_general?: boolean;
     is_expert?: boolean;
     tags?: string[];
+    sector: string;
   }) {
     const { data, error } = await supabase
       .from('comments')
