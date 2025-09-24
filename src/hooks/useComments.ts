@@ -56,16 +56,14 @@ export const useComments = (lawId: string, articleId?: string, isGeneral?: boole
   }) => {
     try {
 
+      // Remove sector from the data sent to Supabase since the column doesn't exist
+      const { sector, ...commentDataForDb } = commentData;
+
       const newComment = await commentService.addComment({
         law_id: lawId,
         article_id: articleId || 'general',
         is_general: isGeneral || false,
-        author_name: commentData.author_name,
-        author_email: commentData.author_email,
-        content: commentData.content,
-        is_expert: commentData.is_expert,
-        tags: commentData.tags,
-        sector: commentData.sector
+        ...commentDataForDb
       });
 
       // Add the new comment to the list with default stats
