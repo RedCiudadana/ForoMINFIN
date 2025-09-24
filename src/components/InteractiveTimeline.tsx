@@ -34,7 +34,7 @@ const InteractiveTimeline = () => {
     {
       id: 2,
       title: 'Fase de Propuestas y Participación',
-      period: 'Agosto - Septiembre 2024',
+      period: 'Enero - marzo 2025',
       description: 'Participación ciudadana y comentarios sobre los artículos',
       details: [
         'Apertura de plataforma de participación',
@@ -49,7 +49,7 @@ const InteractiveTimeline = () => {
     {
       id: 3,
       title: 'Fase de Revisión y Sistematización',
-      period: 'Octubre 2024',
+      period: 'Octubre 2025',
       description: 'Análisis de comentarios e incorporación de observaciones',
       details: [
         'Sistematización de comentarios ciudadanos',
@@ -64,7 +64,7 @@ const InteractiveTimeline = () => {
     {
       id: 4,
       title: 'Fase de Presentación',
-      period: 'Noviembre 2024',
+      period: 'Noviembre 2025',
       description: 'Presentación formal al pleno del Congreso',
       details: [
         'Presentación de versiones finales',

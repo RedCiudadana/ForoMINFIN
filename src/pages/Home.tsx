@@ -50,13 +50,13 @@ const Home = () => {
     {
       step: 2,
       title: 'Lee Artículo por Artículo',
-      description: 'Cada ley está dividida en artículos específicos. Puedes comentar sobre artículos individuales o la ley completa.',
+      description: 'Puedes comentar sobre artículos individuales o la ley completa. Acciones clave:',
       icon: MessageSquare,
       color: 'green',
       actions: [
         'Revisa cada artículo cuidadosamente',
         'Identifica aspectos que te parezcan importantes',
-        'Piensa en cómo te afectaría personalmente'
+        'establece los artículos de impacto en el proceso de contratación pública'
       ]
     },
     {
@@ -122,10 +122,12 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Participación Ciudadana en la Reforma
+              Participación Ciudadana
             </h2>
             <p className="text-xl text-gray-600">
-              Tu participación es clave para modernizar las contrataciones públicas
+              para la
+              creación de una Nueva Ley de
+              Contrataciones Públicas.
             </p>
             <div className="flex justify-center my-6">
               <img src={Linea}/>
@@ -159,7 +161,7 @@ const Home = () => {
                       },
                       {
                         value: 18,
-                        label: 'Artículos propuestos',
+                        label: 'Mejoras propuestas',
                         description: 'Para modernizar las compras',
                         color: 'blue',
                         trend: '6 capítulos temáticos'
@@ -214,10 +216,13 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Reforma a la Ley de Contrataciones Públicas
+              Hacia una nueva era en las contrataciones públicas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Una propuesta integral para modernizar el sistema de compras del Estado guatemalteco, promoviendo transparencia, eficiencia y participación ciudadana en el control de recursos públicos
+              Impulsamos un cambio integral en el Sistema Nacional de
+              Contrataciones Públicas. Nuestro objetivo es modernizarlo,
+              promoviendo la transparencia, eficiencia, rendición de cuentas y una
+              activa participación ciudadana en el control de los recursos públicos.
             </p>
             <div className="flex justify-center my-6">
               <img src={Linea}/>
@@ -260,10 +265,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Cronograma de la Reforma - MINFIN
+              Conoce el proceso de la nueva Ley de Contrataciones Públicas
             </h2>
             <p className="text-xl text-gray-600">
-              Fases del proceso de reforma a la Ley de Contrataciones Públicas impulsado por el MINFIN
+              La creación de esta nueva ley, impulsada por el Ministerio de Finanzas Públicas, se llevo a cabo en varias fases.
             </p>
             <div className="flex justify-center my-6">
               <img src={Linea}/>
@@ -279,10 +284,12 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              ¿Cómo Participar en la Reforma?
+              ¿Cómo Participar?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Participa activamente en la modernización del sistema de contrataciones públicas de Guatemala
+              Participa activamente en la modernización del
+              Sistema Nacional de Contrataciones Públicas de
+              Guatemala
             </p>
             <div className="flex justify-center my-6">
               <img src={Linea}/>
@@ -348,20 +355,22 @@ const Home = () => {
               <div className="text-center">
                 <Clock className="h-12 w-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Tu Participación Importa
+                  ¡Tu participación es clave!
                 </h3>
                 <p className="text-gray-600 max-w-3xl mx-auto mb-6 leading-relaxed">
-                  Cada comentario que envíes será revisado por el equipo técnico del MINFIN y los especialistas del Ministerio de Finanzas Públicas. 
-                  Los aportes más relevantes y técnicamente viables serán incorporados en las versiones finales de las propuestas 
-                  antes de su presentación formal.
+                  Cada comentario que envíes será revisado por el equipo técnico y
+                  especialistas del Ministerio de Finanzas Públicas. Los aportes más relevantes
+                  y viables serán integrados en las propuestas finales, antes de su
+                  presentación.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                   <div className="text-center">
                     <div className="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
                       <MessageSquare className="h-8 w-8 text-blue-800" />
                     </div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Comentarios Revisados</h4>
-                    <p className="text-sm text-gray-600">Todos los comentarios son analizados por expertos del MINFIN</p>
+                    <h4 className="font-semibold text-gray-900 mb-2">Explora el contenido de la nueva Ley</h4>
+                    <p className="text-sm text-gray-600">Revisa el documento que contiene la propuesta
+                      de la nueva Ley. Acciones clave: descarga el PDF completo si lo deseas e identifica los temas que te interesan.</p>
                   </div>
                   <div className="text-center">
                     <div className="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -389,10 +398,12 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              ¿Listo para hacer oír tu voz?
+              Tus comentarios y sugerencias son importantes
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Tu participación es fundamental para construir propuestas que realmente sirvan a Guatemala. El MINFIN te invita a unirte a este diálogo democrático para fortalecer las finanzas públicas del país.
+              Tu participación es fundamental para crear propuestas que realmente sirvan a
+              Guatemala. El Ministerio de Finanzas Públicas, te invita a ser parte de este diálogo
+              democrático y, juntos, fortalecer las finanzas públicas del país.
             </p>
             <div className="flex justify-center my-6">
               <img src={Linea}/>

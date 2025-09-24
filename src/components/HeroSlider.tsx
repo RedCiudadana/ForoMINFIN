@@ -28,10 +28,9 @@ const HeroSlider = () => {
   const slides: Slide[] = [
     {
       id: 'main',
-      title: 'Participa en la',
-      title: 'Modernización de las',
+      title: 'Participa en la Modernización de las',
       subtitle: 'Contrataciones Públicas',
-      description: 'Participa en la reforma más importante del sistema de compras del Estado guatemalteco. El MINFIN te invita a contribuir con tus comentarios para crear un marco legal transparente, eficiente y moderno.',
+      description: 'El Ministerio de Finanzas Públicas, te invita a participar en la transformación más importante del Sistema Nacional de Contrataciones Públicas del Estado guatemalteco. Tus comentarios y sugerencias nos ayudarán a crear un marco legal más transparente, eficiente y moderno.',
       image: Slider1,
       ctaText: 'Participa Ahora',
       ctaLink: '/ley/contrataciones-estado',
