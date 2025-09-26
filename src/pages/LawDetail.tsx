@@ -186,7 +186,7 @@ const LawDetail = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         {/* Main Content */}
-        <div className="lg:col-span-3">
+        <div className="lg:col-span-4">
           {activeTab === 'articles' ? (
             <div>
               {/* Chapter Navigation */}
@@ -295,10 +295,6 @@ const LawDetail = () => {
                                   <button
                                     onClick={() => {
                                       setSelectedArticle(article.id);
-                                      setTimeout(() => {
-                                        const element = document.getElementById('comment-form');
-                                        element?.scrollIntoView({ behavior: 'smooth' });
-                                      }, 100);
                                     }}
                                     className="text-blue-800 hover:text-green-800 font-medium text-sm transition-colors"
                                   >
@@ -306,9 +302,19 @@ const LawDetail = () => {
                                   </button>
                                 </div>
                                 
-                                {/* Comments for this article */}
+                                {/* Article Comment Form */}
                                 {isSelected && (
                                   <div className="mt-6 border-t border-gray-100 pt-6">
+                                    <CommentForm
+                                      onSubmit={handleArticleCommentSubmit}
+                                      loading={articleLoading}
+                                    />
+                                  </div>
+                                )}
+                                
+                                {/* Comments for this article */}
+                                {isSelected && (
+                                  <div className="mt-6 border-t border-gray-200 pt-6">
                                     <CommentSection
                                       lawId={lawId!}
                                       articleId={article.id}
@@ -377,10 +383,6 @@ const LawDetail = () => {
                                     <button
                                       onClick={() => {
                                         setSelectedArticle(article.id);
-                                        setTimeout(() => {
-                                          const element = document.getElementById('comment-form');
-                                          element?.scrollIntoView({ behavior: 'smooth' });
-                                        }, 100);
                                       }}
                                       className="text-green-600 hover:text-green-800 font-medium text-sm transition-colors"
                                     >
@@ -388,9 +390,19 @@ const LawDetail = () => {
                                     </button>
                                   </div>
                                   
-                                  {/* Comments for this article */}
+                                  {/* Article Comment Form */}
                                   {isSelected && (
                                     <div className="mt-4 border-t border-gray-200 pt-4">
+                                      <CommentForm
+                                        onSubmit={handleArticleCommentSubmit}
+                                        loading={articleLoading}
+                                      />
+                                    </div>
+                                  )}
+                                  
+                                  {/* Comments for this article */}
+                                  {isSelected && (
+                                    <div className="mt-4 border-t border-gray-300 pt-4">
                                       <CommentSection
                                         lawId={lawId!}
                                         articleId={article.id}
@@ -441,47 +453,6 @@ const LawDetail = () => {
           )}
         </div>
 
-        {/* Sidebar */}
-        <div className="lg:col-span-1">
-          <div className="sticky top-8 space-y-6">
-            {/* Article Comment Form */}
-            {selectedArticle && activeTab === 'articles' && (
-              <div id="comment-form">
-                <CommentForm
-                  onSubmit={handleArticleCommentSubmit}
-                  loading={articleLoading}
-                />
-              </div>
-            )}
-
-            {/* Quick Stats */}
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
-              <h4 className="font-semibold text-gray-900 mb-3">Resumen Rápido</h4>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Artículos:</span>
-                  <span className="font-medium">{law.articles.length}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Capítulos:</span>
-                  <span className="font-medium">6</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Help */}
-            <div className="bg-blue-50 rounded-lg p-4">
-              <h4 className="font-semibold text-blue-800 mb-2">¿Cómo participar?</h4>
-              <ul className="text-sm text-blue-800 space-y-1">
-                <li>• Navega por capítulos temáticos</li>
-                <li>• Lee cada artículo cuidadosamente</li>
-                <li>• Comparte comentarios constructivos</li>
-                <li>• Vota por comentarios útiles</li>
-                <li>• Responde a otros participantes</li>
-              </ul>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
