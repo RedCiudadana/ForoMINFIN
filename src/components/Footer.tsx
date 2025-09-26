@@ -23,12 +23,20 @@ const Footer = () => {
               <h3 className="text-lg font-semibold mb-4">Contacto</h3>
               <div className="space-y-3">
                 <div className="flex items-center space-x-2">
-                  <Mail className="h-4 w-4 text-white" />
-                  <span className="text-sm">participacion@minfin.gob.gt</span>
+                  <Phone className="h-4 w-4 text-white" />
+                  <span className="text-sm">PBX: 2374-3000</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Phone className="h-4 w-4 text-white" />
-                  <span className="text-sm">+502 2248-0000</span>
+                  <ExternalLink className="h-4 w-4 text-white" />
+                  <a href="https://www.minfin.gob.gt" className="text-sm hover:text-blue-300 transition-colors">
+                    www.minfin.gob.gt
+                  </a>
+                </div>
+                <div className="text-sm text-white">
+                  8a. Avenida 20-59 Zona 1, Centro Cívico, Guatemala - 01001
+                </div>
+                <div className="text-xs text-gray-300">
+                  Ultima Actualización: Jueves 25 Septiembre 2025, 16:11:15.
                 </div>
               </div>
             </div>
@@ -38,20 +46,21 @@ const Footer = () => {
               <h3 className="text-lg font-semibold mb-4">Enlaces Útiles</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-sm text-white hover:text-white transition-colors flex items-center space-x-1">
-                    <span>Portal del Congreso</span>
+                  <a href="https://www.oj.gob.gt" target="_blank" rel="noopener noreferrer" className="text-sm text-white hover:text-blue-300 transition-colors flex items-center space-x-1">
+                    <span>Organismo Judicial</span>
                     <ExternalLink className="h-3 w-3" />
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-sm text-white hover:text-white transition-colors flex items-center space-x-1">
-                    <span>Transparencia</span>
+                  <a href="https://www.guatemala.gob.gt" target="_blank" rel="noopener noreferrer" className="text-sm text-white hover:text-blue-300 transition-colors flex items-center space-x-1">
+                    <span>Organismo Ejecutivo</span>
                     <ExternalLink className="h-3 w-3" />
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-sm text-white hover:text-white transition-colors">
-                    Política de Privacidad
+                  <a href="https://www.congreso.gob.gt" target="_blank" rel="noopener noreferrer" className="text-sm text-white hover:text-blue-300 transition-colors flex items-center space-x-1">
+                    <span>Organismo Legislativo</span>
+                    <ExternalLink className="h-3 w-3" />
                   </a>
                 </li>
               </ul>
@@ -86,7 +95,7 @@ const Footer = () => {
               2025 MINFIN - Ministerio de Finanzas Públicas de Guatemala.
             </p>
             <p className="text-xs text-white mt-2">
-              Foro de Participación Ciudadana - MINFIN
+              Desarrollado con <a href="https://participa.redciudadana.org/" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-blue-200 underline">Participa!</a> (software de código abierto) de <a href="https://www.redciudadana.org/" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-blue-200 underline">Red Ciudadana</a>
             </p>
           </div>
         </div>
