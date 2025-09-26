@@ -13,8 +13,7 @@ Este proyecto es una plataforma web para la participación ciudadana en la revis
 1. **Clona el repositorio:**
 
    ```sh
-   git clone https://github.com/tu-usuario/ForoTransformacionDigital.git
-   cd ForoTransformacionDigital
+   [git clone https://github.com/tu-usuario/ForoTransformacionDigital.git](https://github.com/RedCiudadana/ForoMINFIN.git)
    ```
 
 2. **Instala las dependencias:**
