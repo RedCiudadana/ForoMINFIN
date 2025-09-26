@@ -141,6 +141,27 @@ const CommentForm: React.FC<CommentFormProps> = ({
         </div>
 
         {/* Comment Content */}
+        {/* Sector Selection */}
+        <div>
+          <label htmlFor="sector" className="block text-sm font-medium text-gray-700 mb-1">
+            Sector *
+          </label>
+          <select
+            id="sector"
+            value={formData.sector}
+            onChange={(e) => handleInputChange('sector', e.target.value)}
+            className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            required
+            disabled={isSubmitting || loading}
+          >
+            <option value="">Selecciona tu sector</option>
+            <option value="sector-ejecutivo">Sector Ejecutivo</option>
+            <option value="sector-privado">Sector Privado</option>
+            <option value="sociedad-civil">Sociedad Civil</option>
+            <option value="academia">Academia</option>
+          </select>
+        </div>
+
         <div>
           <label htmlFor="content" className="block text-sm font-medium text-gray-700 mb-1">
             Tu comentario *
@@ -222,26 +243,6 @@ const CommentForm: React.FC<CommentFormProps> = ({
           </div>
         )}
 
-        {/* Sector Selection */}
-        <div>
-          <label htmlFor="sector" className="block text-sm font-medium text-gray-700 mb-1">
-            Sector *
-          </label>
-          <select
-            id="sector"
-            value={formData.sector}
-            onChange={(e) => handleInputChange('sector', e.target.value)}
-            className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            required
-            disabled={isSubmitting || loading}
-          >
-            <option value="">Selecciona tu sector</option>
-            <option value="sector-ejecutivo">Sector Ejecutivo</option>
-            <option value="sector-privado">Sector Privado</option>
-            <option value="sociedad-civil">Sociedad Civil</option>
-            <option value="academia">Academia</option>
-          </select>
-        </div>
 
 
         {/* Submit Button */}
