@@ -5,7 +5,7 @@ Este proyecto es una plataforma web para la participación ciudadana en la revis
 
 - **Node.js** >= 18.x
 - **npm** >= 9.x
-- Variables de entorno para Supabase y reCAPTCHA (ver sección de configuración)
+- Variables de entorno para Supabase
 - Acceso a internet para cargar fuentes y recursos externos
 
 ## Instalación
