@@ -187,6 +187,17 @@ const CommentSection: React.FC<CommentSectionProps> = ({ lawId, articleId, isGen
                     )}
                   </div>
                   <span className="text-sm text-gray-500">{formatDate(comment.created_at)}</span>
+                  {comment.sector && (
+                    <div className="mt-1">
+                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">
+                        {comment.sector === 'sector-ejecutivo' && 'Sector Ejecutivo'}
+                        {comment.sector === 'sector-privado' && 'Sector Privado'}
+                        {comment.sector === 'sociedad-civil' && 'Sociedad Civil'}
+                        {comment.sector === 'academia' && 'Academia'}
+                        {comment.sector === 'ciudadano' && 'Ciudadano'}
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
               

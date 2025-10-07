@@ -21,6 +21,7 @@ export interface Comment {
   is_expert: boolean;
   is_highlighted: boolean;
   tags: string[];
+  sector: string;
   created_at: string;
   updated_at: string;
   like_count?: number;
@@ -112,6 +113,7 @@ export const commentService = {
     author_name: string;
     author_email?: string;
     content: string;
+    sector: string;
     is_general?: boolean;
     is_expert?: boolean;
     tags?: string[];
