@@ -35,7 +35,7 @@ const HeroSlider = () => {
       ctaText: 'Participa Ahora',
       ctaLink: '/ley/contrataciones-estado',
       secondaryCtaText: 'Ver Video Explicativo',
-      secondaryCtaLink: '/recursos'
+      secondaryCtaLink: '/calendario'
     }
   ];
 
@@ -121,7 +121,7 @@ const HeroSlider = () => {
                 
                 {currentSlideData.secondaryCtaText && (
                   <Link
-                    to={currentSlideData.secondaryCtaLink!}
+                    to="/calendario"
                     className="group border-2 border-white/30 text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 inline-flex items-center justify-center backdrop-blur-sm"
                   >
                     <Play className="mr-2 h-5 w-5" />

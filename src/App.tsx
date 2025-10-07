@@ -5,9 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import LawDetail from './pages/LawDetail';
-import FAQ from './pages/FAQ';
 import Calendar from './pages/Calendar';
-import Resources from './pages/Resources';
 import NotFound from './pages/NotFound';
 import Loader from './components/loader';
 
@@ -43,9 +41,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/ley/:lawId" element={<LawDetail />} />
-                <Route path="/faq" element={<FAQ />} />
                 <Route path="/calendario" element={<Calendar />} />
-                <Route path="/recursos" element={<Resources />} />
                 {/* Catch all other routes */}
                 <Route path="*" element={<NotFound />} />
               </Routes>

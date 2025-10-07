@@ -13,13 +13,6 @@ const NotFound = () => {
       color: 'blue'
     },
     {
-      title: 'Preguntas Frecuentes',
-      description: 'Encuentra respuestas a las dudas más comunes',
-      link: '/faq',
-      icon: Search,
-      color: 'green'
-    },
-    {
       title: 'Calendario',
       description: 'Conoce las fechas importantes del proceso',
       link: '/calendario',
@@ -156,13 +149,6 @@ const NotFound = () => {
               nuestro equipo está aquí para ayudarte.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/faq"
-                className="inline-flex items-center px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
-              >
-                <Search className="h-5 w-5 mr-2" />
-                Ver Preguntas Frecuentes
-              </Link>
               <a
                 href="mailto:participacion@congreso.gob.gt"
                 className="inline-flex items-center px-6 py-3 bg-orange-100 text-orange-700 rounded-lg hover:bg-orange-200 transition-colors"
