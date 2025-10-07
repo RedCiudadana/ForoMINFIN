@@ -10,9 +10,7 @@ const Header = () => {
   const navigation = [
     { name: 'Inicio', href: '/' },
     { name: 'La Reforma', href: '/ley/contrataciones-estado' },
-    { name: 'Preguntas Frecuentes', href: '/faq' },
     { name: 'Calendario', href: '/calendario' },
-    { name: 'Recursos', href: '/recursos' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -57,21 +55,10 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            
-            {/* Notification Bell */}
-            <button className="ml-4 p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors relative">
-              <Bell className="h-5 w-5" />
-              <span className="absolute -top-1 -right-1 h-3 w-3 bg-blue-800 rounded-full animate-pulse"></span>
-            </button>
           </nav>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
-            <button className="p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors relative">
-              <Bell className="h-5 w-5" />
-              <span className="absolute -top-1 -right-1 h-2 w-2 bg-blue-800 rounded-full"></span>
-            </button>
-            
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 hover:text-blue-600 p-2 rounded-lg hover:bg-blue-50 transition-colors"
