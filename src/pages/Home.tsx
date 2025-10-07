@@ -37,20 +37,19 @@ const Home = () => {
   const processSteps = [
     {
       step: 1,
-      title: 'Explora las Iniciativas',
-      description: 'Revisa las tres propuestas de ley disponibles y elige la que más te interese o afecte.',
+      title: 'Explora el contenido de la nueva Ley',
+      description: 'Revisa el documento que contiene la propuesta de la nueva Ley.',
       icon: FileText,
       color: 'blue',
       actions: [
-        'Lee el resumen de cada iniciativa',
-        'Descarga el PDF completo si lo deseas',
-        'Identifica los temas que te interesan'
+        'Descarga el documento PDF completo si lo deseas.',
+        'Identifica los temas que te interesan.'
       ]
     },
     {
       step: 2,
       title: 'Lee Artículo por Artículo',
-      description: 'Puedes comentar sobre artículos individuales o la ley completa. Acciones clave:',
+      description: 'Puedes comentar sobre artículos individuales o la ley completa.',
       icon: MessageSquare,
       color: 'green',
       actions: [
@@ -62,25 +61,12 @@ const Home = () => {
     {
       step: 3,
       title: 'Comparte tu Opinión',
-      description: 'Envía comentarios constructivos y específicos. Tu perspectiva como ciudadano es valiosa para mejorar las leyes.',
+      description: 'Envía comentarios constructivos y específicos. Tu opinión es valiosa para mejorar el proyecto.',
       icon: Users,
       color: 'orange',
       actions: [
         'Escribe comentarios claros y específicos',
-        'Propón mejoras o cambios concretos',
-        'Explica cómo te afectaría la propuesta'
-      ]
-    },
-    {
-      step: 4,
-      title: 'Participa en el Diálogo',
-      description: 'Vota por comentarios útiles, responde a otros participantes y mantente informado sobre el proceso.',
-      icon: CheckCircle,
-      color: 'purple',
-      actions: [
-        'Vota por comentarios que consideres útiles',
-        'Responde a otros participantes',
-        'Sigue las actualizaciones del proceso'
+        'Redacta tus propuestas de mejora o cambios concretos'
       ]
     }
   ];
@@ -209,12 +195,12 @@ const Home = () => {
               promoviendo la transparencia, eficiencia, rendición de cuentas y una
               activa participación ciudadana en el control de los recursos públicos.
             </p>
-            <div className="flex justify-center my-6">
+            {/* <div className="flex justify-center my-6">
               <img src={Linea}/>
-            </div>
+            </div> */}
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {laws.filter(law => law.id === 'contrataciones-estado').map((law, index) => {
               const IconComponent = getIconComponent(law.icon);
               
@@ -242,7 +228,7 @@ const Home = () => {
                 </AnimatedSection>
               );
             })}
-          </div>
+          </div> */}
         </div>
       </AnimatedSection>
       {/* Timeline Section */}
@@ -253,7 +239,7 @@ const Home = () => {
               Conoce el proceso de la nueva Ley de Contrataciones Públicas
             </h2>
             <p className="text-xl text-gray-600">
-              La creación de esta nueva ley, impulsada por el Ministerio de Finanzas Públicas, se llevo a cabo en varias fases.
+              La creación de esta nueva ley, impulsada por el Ministerio de Finanzas Públicas, se llevó a cabo en varias fases.
             </p>
             <div className="flex justify-center my-6">
               <img src={Linea}/>
@@ -281,7 +267,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {processSteps.map((step, index) => {
               const IconComponent = step.icon;
               const colors = getStepColor(step.color);
@@ -343,12 +329,10 @@ const Home = () => {
                   ¡Tu participación es clave!
                 </h3>
                 <p className="text-gray-600 max-w-3xl mx-auto mb-6 leading-relaxed">
-                  Cada comentario que envíes será revisado por el equipo técnico y
-                  especialistas del Ministerio de Finanzas Públicas. Los aportes más relevantes
-                  y viables serán integrados en las propuestas finales, antes de su
-                  presentación.
+                  Cada comentario que envíes será revisado, analizado e integrado en el proyecto final por el equipo
+                  técnico y especialista del Ministerio de Finanzas Públicas.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
                   <div className="text-center">
                     <div className="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
                       <MessageSquare className="h-8 w-8 text-blue-800" />
@@ -356,13 +340,6 @@ const Home = () => {
                     <h4 className="font-semibold text-gray-900 mb-2">Explora el contenido de la nueva Ley</h4>
                     <p className="text-sm text-gray-600">Revisa el documento que contiene la propuesta
                       de la nueva Ley. Acciones clave: descarga el PDF completo si lo deseas e identifica los temas que te interesan.</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <Users className="h-8 w-8 text-blue-800" />
-                    </div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Diálogo Constructivo</h4>
-                    <p className="text-sm text-gray-600">Intercambio de ideas entre ciudadanos y expertos</p>
                   </div>
                   <div className="text-center">
                     <div className="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -386,9 +363,8 @@ const Home = () => {
               Tus comentarios y sugerencias son importantes
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Tu participación es fundamental para crear propuestas que realmente sirvan a
-              Guatemala. El Ministerio de Finanzas Públicas, te invita a ser parte de este diálogo
-              democrático y, juntos, fortalecer las finanzas públicas del país.
+              El Ministerio de Finanzas Públicas te invita a ser parte de este esfuerzo para
+              modernizar las contrataciones públicas de Guatemala.
             </p>
             <div className="flex justify-center my-6">
               <img src={Linea}/>
@@ -400,12 +376,6 @@ const Home = () => {
               >
                 Comenzar a Participar
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/calendario"
-                className="group border-2 border-white/30 text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 inline-flex items-center justify-center backdrop-blur-sm"
-              >
-                Ver Calendario
               </Link>
             </div>
           </div>

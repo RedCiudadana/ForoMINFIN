@@ -1,7 +1,7 @@
 ---
-title: "Reformas a la Ley de Contrataciones del Estado"
+title: "Proyecto de Ley de Contrataciones Públicas"
 shortDescription: "Modernización integral del sistema de contrataciones públicas con transparencia, digitalización y fortalecimiento de la competencia"
-fullDescription: "Esta iniciativa de ley busca transformar completamente el sistema de contrataciones públicas de Guatemala, incorporando tecnologías digitales avanzadas, mecanismos de transparencia ciudadana, procesos modernos de adquisición y un marco robusto de control y sanciones. La propuesta establece un nuevo paradigma en las compras del Estado, priorizando la eficiencia, la competencia justa y la participación ciudadana en el control de los recursos públicos."
+fullDescription: "Este proyecto busca transformar el sistema nacional de contrataciones públicas, incorporando la contratación electrónica como pilar fundamental para crear transparencia, eficiencia y ahorros, mayor concurrencia y competencia, estandarización de procesos a través de formularios electrónicos y certeza jurídica. Cualquier duda o comentario puedes comunicarte al correo: nraxon@minfin.gob.gt"
 icon: "shield"
 color: "green"
 pdfUrl: "/docs/reformas-contrataciones-estado.pdf"

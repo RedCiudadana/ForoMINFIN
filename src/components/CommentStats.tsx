@@ -35,20 +35,6 @@ const CommentStats: React.FC<CommentStatsProps> = ({ lawId, articleId }) => {
       icon: Users,
       color: 'text-blue-800',
       bgColor: 'bg-blue-500'
-    },
-    {
-      label: 'Expertos',
-      value: stats.expertComments,
-      icon: Award,
-      color: 'text-blue-800',
-      bgColor: 'bg-blue-500'
-    },
-    {
-      label: 'Destacados',
-      value: stats.highlightedComments,
-      icon: TrendingUp,
-      color: 'text-blue-800',
-      bgColor: 'bg-blue-500'
     }
   ];
 
@@ -58,7 +44,7 @@ const CommentStats: React.FC<CommentStatsProps> = ({ lawId, articleId }) => {
         Estadísticas de Participación
       </h3>
       
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
         {statItems.map((item, index) => {
           const IconComponent = item.icon;
           
@@ -78,28 +64,6 @@ const CommentStats: React.FC<CommentStatsProps> = ({ lawId, articleId }) => {
         })}
       </div>
 
-      {stats.totalComments > 0 && (
-        <div className="mt-6 pt-4 border-t border-gray-200">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
-            <div>
-              <div className="text-lg font-semibold text-gray-900">
-                {Math.round((stats.expertComments / stats.totalComments) * 100)}%
-              </div>
-              <div className="text-sm text-gray-600">
-                Comentarios de expertos
-              </div>
-            </div>
-            <div>
-              <div className="text-lg font-semibold text-gray-900">
-                {Math.round((stats.highlightedComments / stats.totalComments) * 100)}%
-              </div>
-              <div className="text-sm text-gray-600">
-                Comentarios destacados
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

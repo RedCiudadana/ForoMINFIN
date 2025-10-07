@@ -199,7 +199,7 @@ const Calendar = () => {
       </div>
 
       {/* Upcoming Events */}
-      <div>
+      {/* <div>
         <h2 className="text-2xl font-bold text-gray-900 mb-8">Próximos Eventos</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -239,7 +239,7 @@ const Calendar = () => {
             Suscribirse a actualizaciones
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

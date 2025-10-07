@@ -1,5 +1,4 @@
-import React from 'react';
-import { ExternalLink } from 'lucide-react';
+// TopBar is a presentational component, no React import required with the new JSX transform
 import Redes1 from '../assets/footer/REDES-01.png';
 import Redes2 from '../assets/footer/REDES-02.png';
 import Redes3 from '../assets/footer/REDES-03.png';
@@ -30,7 +29,7 @@ const TopBar = () => {
   ];
 
   return (
-    <div className="bg-gray-900 text-white py-2 text-sm">
+    <div id="topbar" className="bg-gray-900 text-white py-2 text-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Left side - Organization info */}

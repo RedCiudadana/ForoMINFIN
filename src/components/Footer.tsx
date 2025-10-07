@@ -11,7 +11,7 @@ const Footer = () => {
     <>
       <footer className="bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
             {/* Logo */}
             <div>
@@ -42,7 +42,7 @@ const Footer = () => {
             </div>
 
             {/* Enlaces Útiles */}
-            <div>
+            {/* <div>
               <h3 className="text-lg font-semibold mb-4">Enlaces Útiles</h3>
               <ul className="space-y-2">
                 <li>
@@ -64,22 +64,22 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
 
             {/* Redes Sociales */}
             <div>
               <h3 className="text-lg font-semibold mb-4">Síguenos</h3>
               <div className="flex space-x-4">
-                <a href="https://www.facebook.com/Redciudadanagt" target='_blank' className="text-white hover:text-blue-400 transition-colors">
+                <a href="https://www.facebook.com/MinfinGT/" target='_blank' className="text-white hover:text-blue-400 transition-colors">
                   <img src={Redes1} className="h-10 w-10" />
                 </a>
-                <a href="https://twitter.com/redxguate" target='_blank' className="text-white hover:text-blue-400 transition-colors">
+                <a href="https://x.com/MinFinGT" target='_blank' className="text-white hover:text-blue-400 transition-colors">
                   <img src={Redes2} className="h-10 w-10" />
                 </a>
-                <a href="https://www.instagram.com/redxguate/" target='_blank' className="text-white hover:text-red-400 transition-colors">
+                <a href="https://www.instagram.com/minfingt/" target='_blank' className="text-white hover:text-red-400 transition-colors">
                   <img src={Redes3} className="h-10 w-10" />
                 </a>
-                <a href="https://www.youtube.com/channel/UCQwc62j7beStZYFzwPxBEQg" target='_blank' className="text-white hover:text-red-400 transition-colors">
+                <a href="https://www.youtube.com/user/minfingt" target='_blank' className="text-white hover:text-red-400 transition-colors">
                   <img src={Redes4} className="h-10 w-10" />
                 </a>
               </div>

@@ -192,7 +192,7 @@ const LawDetail = () => {
               {/* Chapter Navigation */}
               <div className="mb-8">
                 <h2 className="text-xl font-semibold text-gray-900 mb-4">
-                  Navegación por Capítulos
+                  Navegación por Títulos
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {getChapters().map((chapter) => (

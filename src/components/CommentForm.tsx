@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-import { Send, User, Mail, Tag, Loader2 } from 'lucide-react';
+import React, { useState } from 'react';
+import { Send, User, Mail, Loader2 } from 'lucide-react';
 
 interface CommentFormProps {
   onSubmit: (data: {
@@ -25,7 +25,8 @@ const CommentForm: React.FC<CommentFormProps> = ({
     content: '',
     tags: '',
     is_expert: false,
-    sector: ''
+    sector: '',
+    sector_other: ''
   });
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -53,7 +54,7 @@ const CommentForm: React.FC<CommentFormProps> = ({
         content: formData.content,
         is_expert: formData.is_expert,
         tags: tags.length > 0 ? tags : undefined,
-        sector: formData.sector
+        sector: formData.sector === 'otros' ? (formData.sector_other || 'Otros') : formData.sector
       });
 
       // Reset form but keep email for convenience
@@ -63,7 +64,8 @@ const CommentForm: React.FC<CommentFormProps> = ({
         content: '',
         tags: '',
         is_expert: false,
-        sector: ''
+        sector: '',
+        sector_other: ''
       }));
       setShowAdvanced(false);
       
@@ -84,7 +86,7 @@ const CommentForm: React.FC<CommentFormProps> = ({
 
   const isFormValid = formData.content.trim() && 
                      formData.author_name.trim() && 
-                     formData.sector.trim() && 
+                     (formData.sector.trim() && (formData.sector !== 'otros' || formData.sector_other.trim())) && 
                      formData.content.length >= 10 && 
                      !isSubmitting && 
                      !loading;
@@ -155,12 +157,31 @@ const CommentForm: React.FC<CommentFormProps> = ({
             disabled={isSubmitting || loading}
           >
             <option value="">Selecciona tu sector</option>
-            <option value="sector-ejecutivo">Sector Ejecutivo</option>
             <option value="sector-privado">Sector Privado</option>
+            <option value="sector-publico">Sector Público</option>
             <option value="sociedad-civil">Sociedad Civil</option>
-            <option value="academia">Academia</option>
+            <option value="organismos-internacionales">Organismos Internacionales</option>
+            <option value="otros">Otros</option>
           </select>
         </div>
+
+        {formData.sector === 'otros' && (
+          <div>
+            <label htmlFor="sector_other" className="block text-sm font-medium text-gray-700 mb-1">
+              Especifica *
+            </label>
+            <input
+              type="text"
+              id="sector_other"
+              value={formData.sector_other}
+              onChange={(e) => handleInputChange('sector_other', e.target.value)}
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Especifica tu sector"
+              required
+              disabled={isSubmitting || loading}
+            />
+          </div>
+        )}
 
         <div>
           <label htmlFor="content" className="block text-sm font-medium text-gray-700 mb-1">
@@ -207,7 +228,7 @@ const CommentForm: React.FC<CommentFormProps> = ({
         {showAdvanced && (
           <div className="space-y-4 p-4 bg-gray-50 rounded-lg">
             {/* Tags */}
-            <div>
+            {/* <div>
               <label htmlFor="tags" className="block text-sm font-medium text-gray-700 mb-1">
                 <Tag className="h-4 w-4 inline mr-1" />
                 Etiquetas (opcional)
@@ -224,7 +245,7 @@ const CommentForm: React.FC<CommentFormProps> = ({
               <p className="text-xs text-gray-500 mt-1">
                 Separa las etiquetas con comas. Ayudan a categorizar tu comentario.
               </p>
-            </div>
+            </div> */}
 
             {/* Expert Checkbox */}
             <div className="flex items-center">

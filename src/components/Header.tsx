@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Scale, Bell } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [topOffset, setTopOffset] = useState(0);
   const location = useLocation();
 
   const navigation = [
@@ -17,15 +18,31 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      // when the page has scrolled beyond the topbar, pin header to top
+      setIsScrolled(window.scrollY >= (topOffset || 0));
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // measure the topbar height so header can sit below it until scrolled
+  useEffect(() => {
+    const measure = () => {
+      const el = document.getElementById('topbar');
+      if (el) setTopOffset(el.getBoundingClientRect().height);
+      else setTopOffset(0);
+    };
+
+    measure();
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
+  }, []);
+
   return (
-    <header className={`fixed top-10 left-0 right-0 z-50 transition-all duration-300 ${
+    <header
+      style={{ top: isScrolled ? 0 : topOffset }}
+      className={`fixed left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' 
         : 'bg-white/80 backdrop-blur-sm border-b border-gray-200/50'

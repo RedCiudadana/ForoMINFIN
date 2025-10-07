@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, ArrowRight, Play, Users, MessageSquare, Calendar } from 'lucide-react';
-import Slider1 from '../assets/slider/SLIDER_01.png';
-import Slider2 from '../assets/slider/SLIDER_02.png';
+import Slider1 from '../assets/slider/Banner.png';
 
 interface Slide {
   id: string;
   title: string;
   subtitle: string;
-  description: string;
+  description1: string;
+  description2: string;
   image: string;
   ctaText: string;
   ctaLink: string;
@@ -30,7 +30,8 @@ const HeroSlider = () => {
       id: 'main',
       title: 'Participa en la Modernización de las',
       subtitle: 'Contrataciones Públicas',
-      description: 'El Ministerio de Finanzas Públicas, te invita a participar en la transformación más importante del Sistema Nacional de Contrataciones Públicas del Estado guatemalteco. Tus comentarios y sugerencias nos ayudarán a crear un marco legal más transparente, eficiente y moderno.',
+      description1: 'El Ministerio de Finanzas Públicas, te invita a participar en la transformación más importante del Sistema Nacional de Contrataciones Públicas del Estado guatemalteco.',
+      description2: 'Tus comentarios y sugerencias nos ayudarán a crear un marco legal más transparente, eficiente y moderno.',
       image: Slider1,
       ctaText: 'Participa Ahora',
       ctaLink: '/ley/contrataciones-estado',
@@ -105,7 +106,11 @@ const HeroSlider = () => {
                 </h1>
                 
                 <p className="text-xl sm:text-2xl text-blue-100 leading-relaxed max-w-2xl">
-                  {currentSlideData.description}
+                  {currentSlideData.description1}
+                </p>
+
+                <p className="text-xl sm:text-2xl text-blue-100 leading-relaxed max-w-2xl">
+                  {currentSlideData.description2}
                 </p>
               </div>
 
@@ -119,15 +124,6 @@ const HeroSlider = () => {
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 
-                {currentSlideData.secondaryCtaText && (
-                  <Link
-                    to="/calendario"
-                    className="group border-2 border-white/30 text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 inline-flex items-center justify-center backdrop-blur-sm"
-                  >
-                    <Play className="mr-2 h-5 w-5" />
-                    {currentSlideData.secondaryCtaText}
-                  </Link>
-                )}
               </div>
             </div>
 
@@ -142,19 +138,10 @@ const HeroSlider = () => {
                       </div>
                       <div>
                         <h3 className="text-white font-semibold">Participación Activa</h3>
-                        <p className="text-blue-200 text-sm">Tu voz cuenta en cada artículo</p>
+                        <p className="text-blue-200 text-sm">Tu opinión cuenta en cada artículo</p>
                       </div>
                     </div>
                     
-                    <div className="flex items-center space-x-4">
-                      <div className="bg-blue-500 rounded-full p-3">
-                        <Users className="h-6 w-6 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-white font-semibold">Diálogo Constructivo</h3>
-                        <p className="text-blue-200 text-sm">Expertos y ciudadanos unidos</p>
-                      </div>
-                    </div>
                     
                     <div className="flex items-center space-x-4">
                       <div className="bg-green-500 rounded-full p-3">

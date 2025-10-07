@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CheckCircle, Clock, Calendar, Users, FileText, Presentation } from 'lucide-react';
+import { CheckCircle, Clock, Calendar, Users, FileText, Presentation, MessageCircleMore } from 'lucide-react';
 
 interface TimelinePhase {
   id: number;
@@ -42,12 +42,25 @@ const InteractiveTimeline = () => {
         'Webinars educativos sobre cada ley',
         'Mesas de trabajo con sectores específicos'
       ],
-      status: 'current',
+      status: 'completed',
       icon: Users,
       color: 'blue'
     },
     {
-      id: 3,
+      id: 2,
+      title: 'Fase de Participación y Consulta',
+      period: 'Enero - marzo 2025',
+      description: 'Conocer experiencias y buenas prácticas nternacionales y recabar insumos de entidades compradoras.',
+      details: [
+        'Remisión de matriz de insumos a entidades compradoras.',
+        'Reuniones para conocer experiencias de otros países (Chile, Paraguay, Perú, Costa Rica, Panamá y República Dominicana).'
+      ],
+      status: 'current',
+      icon: MessageCircleMore,
+      color: 'blue'
+    },
+    {
+      id: 4,
       title: 'Fase de Revisión y Sistematización',
       period: 'Octubre 2025',
       description: 'Análisis de comentarios e incorporación de observaciones',
@@ -59,21 +72,6 @@ const InteractiveTimeline = () => {
       ],
       status: 'upcoming',
       icon: Clock,
-      color: 'blue'
-    },
-    {
-      id: 4,
-      title: 'Fase de Presentación',
-      period: 'Noviembre 2025',
-      description: 'Presentación formal al pleno del Congreso',
-      details: [
-        'Presentación de versiones finales',
-        'Debate en comisiones especializadas',
-        'Primera lectura en el pleno',
-        'Proceso legislativo formal'
-      ],
-      status: 'upcoming',
-      icon: Presentation,
       color: 'blue'
     }
   ];
@@ -143,9 +141,9 @@ const InteractiveTimeline = () => {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-gray-900">{phase.title}</h3>
-                      <span className={`inline-block px-3 py-1 text-sm font-medium rounded-full mt-1 bg-blue-500 text-blue-800`}>
+                      {/* <span className={`inline-block px-3 py-1 text-sm font-medium rounded-full mt-1 bg-blue-500 text-blue-800`}>
                         {phase.period}
-                      </span>
+                      </span> */}
                     </div>
                   </div>
                   
