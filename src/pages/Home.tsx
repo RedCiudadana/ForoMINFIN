@@ -136,6 +136,7 @@ const Home = () => {
 
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <LawStatsWrapper lawId="contrataciones-estado">
               {(contractStats) => {
                 const totalComments = contractStats.totalComments;
