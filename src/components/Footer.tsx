@@ -15,7 +15,9 @@ const Footer = () => {
 
             {/* Logo */}
             <div>
-              <img src="https://www.minfin.gob.gt/images/img_portal/MINFIN-2024-2028_AZUL_01.png" alt="MINFIN Logo" className="h-16 w-auto"/>
+              <img src="https://www.minfin.gob.gt/images/img_portal/MINFIN-2024-2028_AZUL_01.png" alt="MINFIN Logo" className="h-16 w-auto filter-white"/>
+              <p className='mt-8'>Esta es una herramienta facilitada por:</p>
+              <img className="h-8 w-auto filter-white " src="https://www.redciudadana.org/assets/img/red/LOGO-RED_NEGRO.png" alt="Red Ciudadana Logo"/>
             </div>
 
             {/* Información de Contacto */}
@@ -95,7 +97,7 @@ const Footer = () => {
               2025 MINFIN - Ministerio de Finanzas Públicas de Guatemala.
             </p>
             <p className="text-xs text-white mt-2">
-              Desarrollado con <a href="https://participa.redciudadana.org/" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-blue-200 underline">Participa!</a> (software de código abierto) de <a href="https://www.redciudadana.org/" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-blue-200 underline">Red Ciudadana</a>
+              Desarrollado con Participa! (software de código abierto) de <a href="https://www.redciudadana.org/" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-blue-200 underline">Red Ciudadana</a>
             </p>
           </div>
         </div>

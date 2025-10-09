@@ -4,7 +4,6 @@ import { CheckCircle, Clock, Calendar, Users, FileText, Presentation, MessageCir
 interface TimelinePhase {
   id: number;
   title: string;
-  period: string;
   description: string;
   details: string[];
   status: 'completed' | 'current' | 'upcoming';
@@ -19,13 +18,12 @@ const InteractiveTimeline = () => {
     {
       id: 1,
       title: 'Fase de Diagnóstico',
-      period: 'Julio 2024',
-      description: 'Análisis de necesidades y consulta inicial con expertos',
+      description: 'Metodología para la elaboración de la propuesta.',
       details: [
-        'Revisión de marco normativo internacional',
-        'Consulta con expertos técnicos',
-        'Análisis de brechas legislativas',
-        'Identificación de actores clave'
+        'Diseño de hoja de ruta',
+        'Derecho comparado',
+        'Mejores Prácticas y Estándares Internacionales',
+        'Análisis Comparativos de Reformas Anteriores'
       ],
       status: 'completed',
       icon: FileText,
@@ -33,24 +31,8 @@ const InteractiveTimeline = () => {
     },
     {
       id: 2,
-      title: 'Fase de Propuestas y Participación',
-      period: 'Enero - marzo 2025',
-      description: 'Participación ciudadana y comentarios sobre los artículos',
-      details: [
-        'Apertura de plataforma de participación',
-        'Comentarios ciudadanos artículo por artículo',
-        'Webinars educativos sobre cada ley',
-        'Mesas de trabajo con sectores específicos'
-      ],
-      status: 'completed',
-      icon: Users,
-      color: 'blue'
-    },
-    {
-      id: 2,
       title: 'Fase de Participación y Consulta',
-      period: 'Enero - marzo 2025',
-      description: 'Conocer experiencias y buenas prácticas nternacionales y recabar insumos de entidades compradoras.',
+      description: 'Conocer experiencias y buenas prácticas internacionales y recabar insumos de entidades compradoras.',
       details: [
         'Remisión de matriz de insumos a entidades compradoras.',
         'Reuniones para conocer experiencias de otros países (Chile, Paraguay, Perú, Costa Rica, Panamá y República Dominicana).'
@@ -60,15 +42,29 @@ const InteractiveTimeline = () => {
       color: 'blue'
     },
     {
-      id: 4,
-      title: 'Fase de Revisión y Sistematización',
-      period: 'Octubre 2025',
-      description: 'Análisis de comentarios e incorporación de observaciones',
+      id: 3,
+      title: 'Fase de elaboración del proyecto',
+      description: 'Redacción y revisión del contenido del proyecto.',
       details: [
-        'Sistematización de comentarios ciudadanos',
-        'Revisión técnica-jurídica',
-        'Incorporación de observaciones viables',
-        'Validación con expertos'
+        'Análisis de insumos de entidades compradoras y buenas prácticas internacionales.',
+        'Elaboración de estructura de la Ley',
+        'Redacción del articulado.',
+        'Revisión y discusión con experto internacional.'
+      ],
+      status: 'current',
+      icon: MessageCircleMore,
+      color: 'blue'
+    },
+    {
+      id: 4,
+      title: 'Fase de Socialización',
+      description: 'Dar a conocer el proyecto y recabar comentarios.',
+      details: [
+        'Publicación de plataforma electrónica para la socialización y recopilación de comentarios.',
+        'Sistematización de comentarios.',
+        'Incorporación de observaciones viables.',
+        'Revisión técnico-jurídica.',
+        'Validación con expertos.'
       ],
       status: 'upcoming',
       icon: Clock,

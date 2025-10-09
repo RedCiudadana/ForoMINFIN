@@ -338,15 +338,17 @@ const Home = () => {
                       <MessageSquare className="h-8 w-8 text-blue-800" />
                     </div>
                     <h4 className="font-semibold text-gray-900 mb-2">Explora el contenido de la nueva Ley</h4>
-                    <p className="text-sm text-gray-600">Revisa el documento que contiene la propuesta
-                      de la nueva Ley. Acciones clave: descarga el PDF completo si lo deseas e identifica los temas que te interesan.</p>
+                    <p className="text-sm text-gray-600">Revisa el documento que
+                      contiene la propuesta de la
+                      nueva Ley.</p>
                   </div>
                   <div className="text-center">
                     <div className="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
                       <CheckCircle className="h-8 w-8 text-blue-800" />
                     </div>
                     <h4 className="font-semibold text-gray-900 mb-2">Impacto Real</h4>
-                    <p className="text-sm text-gray-600">Tus aportes pueden cambiar las leyes finales</p>
+                    <p className="text-sm text-gray-600">Tus aportes enriquecen el
+                      proyecto.</p>
                   </div>
                 </div>
               </div>

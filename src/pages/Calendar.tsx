@@ -1,5 +1,6 @@
 import React from 'react';
 import { Calendar as CalendarIcon, Clock, Users, FileText, Presentation } from 'lucide-react';
+import InteractiveTimeline from '../components/InteractiveTimeline';
 
 const Calendar = () => {
   const phases = [
@@ -156,45 +157,7 @@ const Calendar = () => {
         <div className="relative">
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 transform md:-translate-x-px"></div>
           
-          <div className="space-y-12">
-            {phases.map((phase, index) => {
-              const styles = getStatusStyles(phase.status);
-              const IconComponent = phase.icon;
-              
-              return (
-                <div key={phase.id} className="relative flex items-center">
-                  <div className={`absolute left-4 md:left-1/2 w-8 h-8 rounded-full transform md:-translate-x-1/2 ${styles.bg} ${styles.border} border-2 flex items-center justify-center`}>
-                    <IconComponent className={`h-4 w-4 ${styles.icon}`} />
-                  </div>
-                  
-                  <div className={`ml-16 md:ml-0 ${index % 2 === 0 ? 'md:mr-1/2 md:pr-12' : 'md:ml-1/2 md:pl-12'}`}>
-                    <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-                      <div className="flex items-center mb-3">
-                        <h3 className="text-xl font-bold text-gray-900">{phase.title}</h3>
-                        <span className={`ml-3 px-3 py-1 text-sm font-medium rounded-full ${styles.bg} ${styles.text}`}>
-                          {phase.period}
-                        </span>
-                      </div>
-                      
-                      <p className="text-gray-700 mb-4">{phase.description}</p>
-                      
-                      <div className="space-y-2">
-                        <h4 className="text-sm font-semibold text-gray-900">Actividades principales:</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          {phase.details.map((detail, idx) => (
-                            <li key={idx} className="flex items-start">
-                              <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 mr-2 flex-shrink-0"></span>
-                              {detail}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <InteractiveTimeline/>
         </div>
       </div>
 

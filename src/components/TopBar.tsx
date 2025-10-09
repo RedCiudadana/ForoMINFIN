@@ -37,14 +37,6 @@ const TopBar = () => {
             <span className="text-gray-300">
               Participa! Una herramienta de Red Ciudadana
             </span>
-            <a 
-              href="https://redciudadana.org.gt" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-white hover:text-blue-300 transition-colors inline-flex items-center"
-            >
-              Red Ciudadana
-            </a>
           </div>
 
           {/* Right side - Social media */}

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
@@ -6,6 +6,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [topOffset, setTopOffset] = useState(0);
+  const topOffsetRef = useRef(0);
   const location = useLocation();
 
   const navigation = [
@@ -19,8 +20,11 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       // when the page has scrolled beyond the topbar, pin header to top
-      setIsScrolled(window.scrollY >= (topOffset || 0));
+      setIsScrolled(window.scrollY >= (topOffsetRef.current || 0));
     };
+
+    // initialize based on current scroll position
+    handleScroll();
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -39,6 +43,11 @@ const Header = () => {
     return () => window.removeEventListener('resize', measure);
   }, []);
 
+  // keep a ref in sync so scroll handler reads latest value
+  useEffect(() => {
+    topOffsetRef.current = topOffset;
+  }, [topOffset]);
+
   return (
     <header
       style={{ top: isScrolled ? 0 : topOffset }}
@@ -50,10 +59,8 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-3 group">
-              <img className="h-10 w-auto" src="https://www.minfin.gob.gt/images/img_portal/MINFIN-2024-2028_AZUL_01.png" alt="MINFIN Logo"/>
-              <div className="h-8 w-px bg-gray-300 mx-3"></div>
-              <img className="h-8 w-auto" src="https://www.redciudadana.org/assets/img/red/LOGO-RED_NEGRO.png" alt="Red Ciudadana Logo"/>
+            <Link to="/" className="flex items-center space-x-3 group my-4">
+              <img className="h-16 w-auto my-4" src="https://www.minfin.gob.gt/images/img_portal/MINFIN-2024-2028_AZUL_01.png" alt="MINFIN Logo"/>        
             </Link>
           </div>
 

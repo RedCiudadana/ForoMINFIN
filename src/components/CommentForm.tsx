@@ -214,7 +214,7 @@ const CommentForm: React.FC<CommentFormProps> = ({
         </div>
 
         {/* Advanced Options */}
-        <div>
+        {/* <div>
           <button
             type="button"
             onClick={() => setShowAdvanced(!showAdvanced)}
@@ -223,12 +223,12 @@ const CommentForm: React.FC<CommentFormProps> = ({
           >
             {showAdvanced ? 'Ocultar opciones avanzadas' : 'Mostrar opciones avanzadas'}
           </button>
-        </div>
+        </div> */}
 
-        {showAdvanced && (
+        {/* {showAdvanced && (
           <div className="space-y-4 p-4 bg-gray-50 rounded-lg">
-            {/* Tags */}
-            {/* <div>
+            Tags
+            <div>
               <label htmlFor="tags" className="block text-sm font-medium text-gray-700 mb-1">
                 <Tag className="h-4 w-4 inline mr-1" />
                 Etiquetas (opcional)
@@ -245,9 +245,9 @@ const CommentForm: React.FC<CommentFormProps> = ({
               <p className="text-xs text-gray-500 mt-1">
                 Separa las etiquetas con comas. Ayudan a categorizar tu comentario.
               </p>
-            </div> */}
+            </div>
 
-            {/* Expert Checkbox */}
+            Expert Checkbox
             <div className="flex items-center">
               <input
                 type="checkbox"
@@ -262,7 +262,7 @@ const CommentForm: React.FC<CommentFormProps> = ({
               </label>
             </div>
           </div>
-        )}
+        )} */}
 
 
 
