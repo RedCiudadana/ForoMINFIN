@@ -57,43 +57,38 @@ const LawDetail = () => {
     handleCommentSubmitted();
   };
 
-  // Group articles by chapter
+  // Group articles by title
   const getChapters = () => {
     if (!law) return [];
-    
+
     const chapters = [
       {
-        id: 'cap-1',
-        title: 'Capítulo I – Transparencia y Acceso a la Información',
-        articles: law.articles.slice(0, 3) // Articles 1-3
+        id: 'titulo-1',
+        title: 'TÍTULO I – DISPOSICIONES GENERALES',
+        articles: []
       },
       {
-        id: 'cap-2',
-        title: 'Capítulo II – Modernización de Procesos',
-        articles: law.articles.slice(3, 6) // Articles 4-6
+        id: 'titulo-2',
+        title: 'TÍTULO II – PROCESO DE CONTRATACIÓN PÚBLICA',
+        articles: []
       },
       {
-        id: 'cap-3',
-        title: 'Capítulo III – Fortalecimiento de la Competencia',
-        articles: law.articles.slice(6, 9) // Articles 7-9
+        id: 'titulo-3',
+        title: 'TÍTULO III – PROHIBICIONES, INFRACCIONES Y SANCIONES',
+        articles: []
       },
       {
-        id: 'cap-4',
-        title: 'Capítulo IV – Profesionalización y Control',
-        articles: law.articles.slice(9, 12) // Articles 10-12
+        id: 'titulo-4',
+        title: 'TÍTULO IV – RESOLUCIÓN DE CONTROVERSIAS',
+        articles: []
       },
       {
-        id: 'cap-5',
-        title: 'Capítulo V – Sanciones y Responsabilidad',
-        articles: law.articles.slice(12, 15) // Articles 13-15
-      },
-      {
-        id: 'cap-6',
-        title: 'Capítulo VI – Innovación y Buenas Prácticas',
-        articles: law.articles.slice(15, 18) // Articles 16-18
+        id: 'titulo-5',
+        title: 'TÍTULO V – OTROS TIPOS DE CONTRATACIÓN PÚBLICA',
+        articles: []
       }
     ];
-    
+
     return chapters;
   };
 
@@ -163,7 +158,7 @@ const LawDetail = () => {
                   : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
               }`}
             >
-              Artículos por Capítulos ({law.articles.length})
+              El Proyecto
             </button>
             <button
               onClick={() => {
@@ -189,36 +184,6 @@ const LawDetail = () => {
         <div className="lg:col-span-4">
           {activeTab === 'articles' ? (
             <div>
-              {/* Chapter Navigation */}
-              <div className="mb-8">
-                <h2 className="text-xl font-semibold text-gray-900 mb-4">
-                  Navegación por Títulos
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {getChapters().map((chapter) => (
-                    <button
-                      key={chapter.id}
-                      onClick={() => selectChapter(chapter.id)}
-                      className={`p-4 rounded-lg border-2 text-left transition-all ${
-                        selectedChapter === chapter.id
-                          ? 'border-blue-500 bg-blue-50 shadow-md'
-                          : 'border-gray-200 hover:border-blue-300 hover:bg-blue-50'
-                      }`}
-                    >
-                      <h3 className="font-semibold text-gray-900 mb-2">
-                        {chapter.title.split('–')[0].trim()}
-                      </h3>
-                      <p className="text-sm text-gray-600 mb-2">
-                        {chapter.title.split('–')[1]?.trim()}
-                      </p>
-                      <span className="text-xs text-blue-600 font-medium">
-                        {chapter.articles.length} artículos
-                      </span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
               {/* General Comment Form Toggle */}
               <div className="mb-6 flex justify-end">
                 <button
@@ -241,80 +206,83 @@ const LawDetail = () => {
                 </div>
               )}
 
-              {/* Articles by Chapter */}
+              {/* Articles by Title */}
               <div className="space-y-8">
-                {selectedChapter ? (
-                  // Show selected chapter
-                  getChapters()
-                    .filter(chapter => chapter.id === selectedChapter)
-                    .map((chapter) => (
-                      <div key={chapter.id} className="space-y-6">
-                        <div className="bg-blue-50 rounded-lg p-6 border border-blue-200">
-                          <div className="flex items-center justify-between">
-                            <h2 className="text-2xl font-bold text-blue-900">
-                              {chapter.title}
-                            </h2>
-                            <button
-                              onClick={() => setSelectedChapter(null)}
-                              className="text-blue-600 hover:text-blue-800 font-medium"
-                            >
-                              Ver todos los capítulos
-                            </button>
-                          </div>
+                {getChapters().map((chapter) => {
+                  const isExpanded = expandedChapters.has(chapter.id);
+                  const isSelected = selectedChapter === chapter.id;
+
+                  return (
+                    <div key={chapter.id} className={`bg-white rounded-lg border shadow-sm transition-all ${
+                      isSelected ? 'border-blue-500 ring-2 ring-blue-100' : 'border-gray-200'
+                    }`}>
+                      <button
+                        onClick={() => toggleChapter(chapter.id)}
+                        className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                      >
+                        <div>
+                          <h3 className="text-xl font-bold text-gray-900 mb-2">
+                            {chapter.title}
+                          </h3>
+                          <p className="text-gray-600 text-sm">
+                            {chapter.articles.length === 0 ? 'Contenido disponible próximamente' : `${chapter.articles.length} artículos`}
+                          </p>
                         </div>
-                        
-                        {chapter.articles.map((article) => {
-                          const isSelected = selectedArticle === article.id;
-                          
-                          return (
-                            <div
-                              key={article.id}
-                              className={`bg-white rounded-lg border transition-all ${
-                                isSelected ? 'border-blue-300 ring-2 ring-blue-100 shadow-md' : 'border-gray-200 hover:border-gray-300'
-                              }`}
-                            >
-                              <div className="p-6">
-                                <div className="flex justify-between items-start mb-4">
-                                  <h3 className="text-lg font-semibold text-gray-900">
-                                    {article.number}: {article.title}
-                                  </h3>
-                                </div>
-                                
-                                <p className="text-gray-700 mb-4 leading-relaxed">
+                        {isExpanded ? (
+                          <ChevronDown className="h-6 w-6 text-gray-400" />
+                        ) : (
+                          <ChevronRight className="h-6 w-6 text-gray-400" />
+                        )}
+                      </button>
+
+                      {isExpanded && chapter.articles.length > 0 && (
+                        <div className="border-t border-gray-200 p-6 space-y-4">
+                          {chapter.articles.map((article) => {
+                            const isArticleSelected = selectedArticle === article.id;
+
+                            return (
+                              <div
+                                key={article.id}
+                                className={`p-4 rounded-lg border transition-all ${
+                                  isArticleSelected ? 'border-blue-300 bg-blue-50' : 'border-gray-200 hover:border-gray-300'
+                                }`}
+                              >
+                                <h4 className="font-semibold text-gray-900 mb-2">
+                                  {article.number}: {article.title}
+                                </h4>
+                                <p className="text-gray-700 text-sm mb-3 leading-relaxed">
                                   <ReactMarkdown>{article.content}</ReactMarkdown>
                                 </p>
-                                
+
                                 <div className="flex items-center space-x-4">
                                   <button
-                                    onClick={() => setSelectedArticle(isSelected ? null : article.id)}
-                                    className="text-blue-800 hover:text-white font-medium text-sm transition-colors"
+                                    onClick={() => setSelectedArticle(isArticleSelected ? null : article.id)}
+                                    className="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors"
                                   >
-                                    {isSelected ? 'Cerrar comentarios' : 'Ver comentarios'}
+                                    {isArticleSelected ? 'Cerrar comentarios' : 'Ver comentarios'}
                                   </button>
-                                  
+
                                   <button
                                     onClick={() => {
                                       setSelectedArticle(article.id);
                                     }}
-                                    className="text-blue-800 hover:text-green-800 font-medium text-sm transition-colors"
+                                    className="text-green-600 hover:text-green-800 font-medium text-sm transition-colors"
                                   >
                                     Comentar artículo
                                   </button>
                                 </div>
-                                
-                                {/* Article Comment Form */}
-                                {isSelected && (
-                                  <div className="mt-6 border-t border-gray-100 pt-6">
+
+                                {isArticleSelected && (
+                                  <div className="mt-4 border-t border-gray-200 pt-4">
                                     <CommentForm
                                       onSubmit={handleArticleCommentSubmit}
                                       loading={articleLoading}
                                     />
                                   </div>
                                 )}
-                                
-                                {/* Comments for this article */}
-                                {isSelected && (
-                                  <div className="mt-6 border-t border-gray-200 pt-6">
+
+                                {isArticleSelected && (
+                                  <div className="mt-4 border-t border-gray-300 pt-4">
                                     <CommentSection
                                       lawId={lawId!}
                                       articleId={article.id}
@@ -322,102 +290,13 @@ const LawDetail = () => {
                                   </div>
                                 )}
                               </div>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    ))
-                ) : (
-                  // Show all chapters collapsed
-                  getChapters().map((chapter) => {
-                    const isExpanded = expandedChapters.has(chapter.id);
-                    
-                    return (
-                      <div key={chapter.id} className="bg-white rounded-lg border border-gray-200 shadow-sm">
-                        <button
-                          onClick={() => toggleChapter(chapter.id)}
-                          className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
-                        >
-                          <div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">
-                              {chapter.title}
-                            </h3>
-                            <p className="text-gray-600">
-                              {chapter.articles.length} artículos
-                            </p>
-                          </div>
-                          {isExpanded ? (
-                            <ChevronDown className="h-6 w-6 text-gray-400" />
-                          ) : (
-                            <ChevronRight className="h-6 w-6 text-gray-400" />
-                          )}
-                        </button>
-                        
-                        {isExpanded && (
-                          <div className="border-t border-gray-200 p-6 space-y-4">
-                            {chapter.articles.map((article) => {
-                              const isSelected = selectedArticle === article.id;
-                              
-                              return (
-                                <div
-                                  key={article.id}
-                                  className={`p-4 rounded-lg border transition-all ${
-                                    isSelected ? 'border-blue-300 bg-blue-50' : 'border-gray-200 hover:border-gray-300'
-                                  }`}
-                                >
-                                  <h4 className="font-semibold text-gray-900 mb-2">
-                                    {article.number}: {article.title}
-                                  </h4>
-                                  <p className="text-gray-700 text-sm mb-3 leading-relaxed">
-                                    <ReactMarkdown>{article.content}</ReactMarkdown>
-                                  </p>
-                                  
-                                  <div className="flex items-center space-x-4">
-                                    <button
-                                      onClick={() => setSelectedArticle(isSelected ? null : article.id)}
-                                      className="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors"
-                                    >
-                                      {isSelected ? 'Cerrar comentarios' : 'Ver comentarios'}
-                                    </button>
-                                    
-                                    <button
-                                      onClick={() => {
-                                        setSelectedArticle(article.id);
-                                      }}
-                                      className="text-green-600 hover:text-green-800 font-medium text-sm transition-colors"
-                                    >
-                                      Comentar artículo
-                                    </button>
-                                  </div>
-                                  
-                                  {/* Article Comment Form */}
-                                  {isSelected && (
-                                    <div className="mt-4 border-t border-gray-200 pt-4">
-                                      <CommentForm
-                                        onSubmit={handleArticleCommentSubmit}
-                                        loading={articleLoading}
-                                      />
-                                    </div>
-                                  )}
-                                  
-                                  {/* Comments for this article */}
-                                  {isSelected && (
-                                    <div className="mt-4 border-t border-gray-300 pt-4">
-                                      <CommentSection
-                                        lawId={lawId!}
-                                        articleId={article.id}
-                                      />
-                                    </div>
-                                  )}
-                                </div>
-                              );
-                            })}
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })
-                )}
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           ) : (
