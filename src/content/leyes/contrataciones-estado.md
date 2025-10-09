@@ -545,4 +545,58 @@ articles:
     title: "Prescripción de derechos y créditos contra el Estado"
     content: "Los derechos y créditos contra el Estado que se deriven de actos o contratos contenidos en la presente ley prescriben en dos (2) años, por las circunstancias siguientes:\n\n**a)** Cobro de rentas, alquileres y otras retribuciones de la misma naturaleza;\n\n**b)** Cobro de obligaciones derivadas de contratos;\n\n**c)** Cobro de honorarios y otras reclamaciones de carácter económico.\n\nEn materia de iniciación del plazo, interrupción de la prescripción y situaciones afines, se estará a lo que para el efecto establece el Código Civil y la Ley del Organismo Judicial."
     titleId: "titulo-4"
+
+  - id: "titulo-5-cap-1-art-214"
+    number: "Artículo 214"
+    title: "Concesión"
+    content: "Para los fines de la presente ley, se entiende por concesión a la facultad que el Estado a través de sus entidades obligadas otorga a particulares para que por su cuenta y riesgo, construyan, produzcan, monten, instalen, mejoren, adicionen, conserven, restauren y administren una obra, bien o servicio público, bajo el control de la entidad obligada concedente, con o sin ocupación de bienes públicos, a cambio de una remuneración que el particular cobre a los usuarios.\n\n**Supervisión:** Durante la ejecución de la concesión, la entidad obligada concedente deberá supervisar la ejecución hasta su finalización.\n\n**Restricción:** No podrán concesionarse los servicios públicos que la entidad obligada ya esté prestando y obteniendo utilidades, excepto cuando estudios demuestren mayores beneficios a la población.\n\n**Rescate por utilidad pública:**\n- Servicio deficiente\n- Aumento desmedido de precios\n- Incumplimiento por fuerza mayor o caso fortuito\n\n**Finalización:** Por cumplimiento del plazo, rescisión o revocación aprobada por el Congreso de la República."
+    titleId: "titulo-5"
+
+  - id: "titulo-5-cap-1-art-215"
+    number: "Artículo 215"
+    title: "Adjudicación y aprobación"
+    content: "La concesión se adjudicará previo cumplimiento del procedimiento de concesión establecido en el reglamento. El contrato público será celebrado entre el titular del ministerio o la autoridad superior de la entidad obligada y el concesionario.\n\nTanto las concesiones originales como sus prórrogas deberán someterse por conducto del Organismo Ejecutivo para su consideración y eventual aprobación del Congreso de la República."
+    titleId: "titulo-5"
+
+  - id: "titulo-5-cap-1-art-216"
+    number: "Artículo 216"
+    title: "Cláusulas obligatorias"
+    content: "Además de las cláusulas propias de un contrato público, en los contratos de concesión deberá estipularse:\n\n**a)** Plazo máximo de 25 años, calculado según la cuantía e importancia de la inversión;\n\n**b)** El reglamento de utilización forma parte del contrato;\n\n**c)** Obligaciones del concesionario:\n\n1. Pago de salarios y prestaciones de ley\n2. Conservación de bienes y continuidad del servicio\n3. Las construcciones pasarán al Estado sin reembolso al vencer la concesión\n4. Responder por daños y perjuicios\n5. Capacitación de personal guatemalteco\n6. Pago de porcentaje al Estado\n7. Permitir auditorías\n8. Responder por pérdida o deterioro de bienes del Estado\n9. Otras condiciones según la naturaleza de la concesión"
+    titleId: "titulo-5"
+
+  - id: "titulo-5-cap-1-art-217"
+    number: "Artículo 217"
+    title: "Régimen de concesiones"
+    content: "El régimen de concesiones establecido en este capítulo regirá en todos los casos en los que no exista otra ley específica que contenga normas de concesión para ámbitos especiales de aplicación."
+    titleId: "titulo-5"
+
+  - id: "titulo-5-cap-2-resumen"
+    number: "Capítulo II"
+    title: "Disposiciones Generales de la Enajenación de Bienes del Estado"
+    content: "**Artículos 218-226: Reglas Generales de Enajenación**\n\n**Artículo 218 - Reglas generales:**\nLos procesos de enajenación de bienes muebles, inmuebles y materiales propiedad del Estado se harán observando los principios de transparencia, certeza, eficiencia, competencia y competitividad.\n\n**Artículo 219 - Autoridades competentes:**\n- Para bienes del Estado: Representante legal del Estado\n- Para entidades descentralizadas/autónomas: Representante legal de la entidad\n- Para bienes muebles o materiales: Máxima autoridad de la unidad ejecutora\n\n**Artículo 220 - Modalidades:**\nSubasta pública, venta por oferta directa, oferta por mercado de valores y mercancías, u otros procedimientos transparentes.\n\n**Artículo 221 - Publicaciones:**\nToda convocatoria, adjudicación y actos relacionados deben publicarse obligatoriamente en Guatecompras.\n\n**Artículo 222 - Valuación:**\nLos bienes sujetos a enajenación deben ser valuados por valuador autorizado.\n\n**Artículo 223 - Formalización:**\nMediante escritura pública, contratos públicos o convenios.\n\n**Artículo 224 - Destino de ingresos:**\nConforme a normas presupuestarias generales del Estado.\n\n**Artículo 225 - Prohibiciones:**\n- Enajenación a favor de funcionarios públicos\n- Enajenación sin valuación previa\n- Adjudicación fuera de procedimiento\n- Enajenación de bienes protegidos sin autorización\n\n**Artículo 226 - Supletoriedad:**\nEstas disposiciones son aplicables a los capítulos III y IV del título."
+    titleId: "titulo-5"
+
+  - id: "titulo-5-cap-3-resumen"
+    number: "Capítulo III"
+    title: "Venta, Donación y Permuta de Bienes del Estado"
+    content: "**Artículos 227-230: Venta, Donación, Permuta y Aportación**\n\n**Artículo 227 - Venta de bienes:**\n\n**Bienes inmuebles:**\n- Justificación de conveniencia\n- Acuerdo gubernativo (bienes del Estado) o acuerdo de máxima autoridad (entidades descentralizadas)\n- Valuación obligatoria\n\n**Bienes muebles o materiales:**\n- Determinación de conveniencia\n- Acuerdo de autorización de máxima autoridad\n- Avalúo cuando se requiera\n\n**Artículo 228 - Donación de bienes muebles:**\nSolo cuando exista interés público debidamente justificado, requiere:\n- Justificación técnica\n- Estimación del bien\n- Autorización mediante acuerdo\n\n**Artículo 229 - Permuta:**\n\n**Inmuebles:**\n- Establecer conveniencia pública\n- Acuerdo gubernativo o de máxima autoridad\n- Valuación garantizando equivalencia\n\n**Bienes muebles:**\n- Conveniencia pública\n- Acuerdo de máxima autoridad\n- Valuación con equivalencia de valor\n\n**Artículo 230 - Aportación de bienes:**\nBienes pueden aportarse a entidades privadas o mixtas, requiere:\n- Estudio técnico de beneficio público\n- Acuerdo gubernativo o de máxima autoridad\n- Valuación del bien aportado\n- Formalización mediante escritura pública o contrato"
+    titleId: "titulo-5"
+
+  - id: "titulo-5-cap-4-art-231"
+    number: "Artículo 231"
+    title: "Arrendamiento de bienes inmuebles propiedad del Estado"
+    content: "Este capítulo establece las disposiciones para la regulación del otorgamiento de arrendamiento de bienes inmuebles o fracciones de éstos, que se encuentren registrados a nombre del Estado, asegurando que su aprovechamiento se realice conforme a los principios de publicidad, transparencia, eficiencia y legalidad."
+    titleId: "titulo-5"
+
+  - id: "titulo-5-cap-4-art-232"
+    number: "Artículo 232"
+    title: "Ámbito de aplicación"
+    content: "Sólo podrán darse en arrendamiento los bienes inmuebles o fracciones de éstos, propiedad del Estado, de dominio público de uso no común.\n\nEn ningún caso, podrán darse en arrendamiento bienes inmuebles que estén incluidos en programas de desarrollo estatal."
+    titleId: "titulo-5"
+
+  - id: "titulo-5-cap-4-resumen"
+    number: "Artículos 233-243"
+    title: "Procedimiento de Arrendamiento de Bienes Inmuebles del Estado"
+    content: "**Artículo 233 - Facultad para regular:**\nLa máxima autoridad de las entidades del Estado puede regularizar el procedimiento de arrendamiento. Para bienes sin administración, corresponde a la Dirección de Bienes del Estado del Ministerio de Finanzas Públicas.\n\n**Artículo 234 - Inventario:**\nLa Dirección de Bienes del Estado elabora, actualiza y resguarda inventario de bienes susceptibles de arrendamiento.\n\n**Artículo 235 - Ingresos:**\nDistribución de fondos:\n- 50% ingresos propios de la entidad arrendante\n- 50% al Fondo Común\n\n**Artículo 236 - Destino:**\nCubrir gastos de servicios y fortalecimiento institucional (no mejoras salariales).\n\n**Artículo 237 - Valuación:**\nLa Dirección de Catastro y Avalúo de Bienes Inmuebles realiza avalúos técnicos y elabora metodologías para valores referenciales de renta.\n\n**Artículo 238 - Competitividad:**\nOtorgamiento mediante concurso público a través de Guatecompras.\n\n**Artículo 239 - Formalización:**\nMediante contrato público suscrito por autoridad máxima y arrendatario. Publicación en Guatecompras.\n\n**Artículo 240 - Plazo:**\nMáximo 25 años, prorrogable una vez por período igual o menor.\n\n**Artículo 241 - Garantías:**\nDepósito de un mes de renta y seguro de caución de cumplimiento.\n\n**Artículo 242 - Construcciones:**\nToda construcción, mejora o reparación requiere autorización previa por escrito.\n\n**Artículo 243 - Obligación de informar:**\nInforme trimestral ante CGC y Dirección de Bienes del Estado."
+    titleId: "titulo-5"
 ---
