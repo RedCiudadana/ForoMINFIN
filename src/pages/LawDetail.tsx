@@ -180,8 +180,75 @@ const LawDetail = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        {/* Sidebar Navigator - Only show in articles tab */}
+        {activeTab === 'articles' && (
+          <div className="lg:col-span-1">
+            <div className="sticky top-8">
+              <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-4">
+                <h3 className="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wide">
+                  Navegación
+                </h3>
+                <nav className="space-y-1">
+                  {getChapters().map((chapter) => (
+                    <div key={chapter.id}>
+                      <button
+                        onClick={() => {
+                          toggleChapter(chapter.id);
+                          const element = document.getElementById(chapter.id);
+                          if (element) {
+                            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                          }
+                        }}
+                        className={`w-full text-left px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                          expandedChapters.has(chapter.id)
+                            ? 'bg-blue-50 text-blue-800'
+                            : 'text-gray-700 hover:bg-gray-50'
+                        }`}
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="line-clamp-2">{chapter.title}</span>
+                          {expandedChapters.has(chapter.id) ? (
+                            <ChevronDown className="h-4 w-4 flex-shrink-0 ml-2" />
+                          ) : (
+                            <ChevronRight className="h-4 w-4 flex-shrink-0 ml-2" />
+                          )}
+                        </div>
+                      </button>
+                      {expandedChapters.has(chapter.id) && chapter.articles.length > 0 && (
+                        <div className="ml-3 mt-1 space-y-1 border-l-2 border-gray-200 pl-3">
+                          {chapter.articles.map((article) => (
+                            <button
+                              key={article.id}
+                              onClick={() => {
+                                const element = document.getElementById(`article-${article.id}`);
+                                if (element) {
+                                  element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                }
+                                setSelectedArticle(article.id);
+                              }}
+                              className={`w-full text-left px-2 py-1.5 rounded text-xs transition-colors ${
+                                selectedArticle === article.id
+                                  ? 'bg-blue-100 text-blue-900 font-medium'
+                                  : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                              }`}
+                            >
+                              <span className="line-clamp-2">
+                                {article.number}: {article.title}
+                              </span>
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </nav>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Main Content */}
-        <div className="lg:col-span-4">
+        <div className={activeTab === 'articles' ? 'lg:col-span-3' : 'lg:col-span-4'}>
           {activeTab === 'articles' ? (
             <div>
               {/* General Comment Form Toggle */}
@@ -213,9 +280,13 @@ const LawDetail = () => {
                   const isSelected = selectedChapter === chapter.id;
 
                   return (
-                    <div key={chapter.id} className={`bg-white rounded-lg border shadow-sm transition-all ${
-                      isSelected ? 'border-blue-500 ring-2 ring-blue-100' : 'border-gray-200'
-                    }`}>
+                    <div
+                      key={chapter.id}
+                      id={chapter.id}
+                      className={`bg-white rounded-lg border shadow-sm transition-all scroll-mt-8 ${
+                        isSelected ? 'border-blue-500 ring-2 ring-blue-100' : 'border-gray-200'
+                      }`}
+                    >
                       <button
                         onClick={() => toggleChapter(chapter.id)}
                         className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
@@ -243,7 +314,8 @@ const LawDetail = () => {
                             return (
                               <div
                                 key={article.id}
-                                className={`p-4 rounded-lg border transition-all ${
+                                id={`article-${article.id}`}
+                                className={`p-4 rounded-lg border transition-all scroll-mt-24 ${
                                   isArticleSelected ? 'border-blue-300 bg-blue-50' : 'border-gray-200 hover:border-gray-300'
                                 }`}
                               >
