@@ -269,4 +269,46 @@ articles:
     title: "Funcionamiento del Tribunal"
     content: "Cada miembro del Tribunal Administrativo de Contrataciones Públicas actuará como ponente del asunto que le sea asignado ante la sala correspondiente y las decisiones se tomarán por mayoría simple, pudiendo el disidente razonar su voto, en caso lo considere pertinente. Sus actuaciones serán públicas.\n\nDe todo lo actuado por el Tribunal Administrativo de Contrataciones Públicas, se dejará constancia.\n\nCuando exista cualquier tipo de conflicto de intereses en los casos que debe conocer el Tribunal, el miembro que tenga esta situación lo debe hacer del conocimiento del pleno de la sala y abstenerse de seguir conociendo el asunto, debiendo ser sustituido por el miembro suplente que corresponda.\n\nEl Reglamento del Tribunal Administrativo de Contrataciones Públicas desarrollará lo relativo al sistema interno del Tribunal, la recusación, estructura del Tribunal y demás regulación necesaria para su correcto funcionamiento."
     titleId: "titulo-1"
+
+  - id: "titulo-1-cap-3-art-45"
+    number: "Artículo 45"
+    title: "Guatecompras"
+    content: "Guatecompras será administrado y desarrollado por la Dirección General de Contrataciones Públicas, la cual podrá apoyarse en otras dependencias del Ministerio de Finanzas para su desarrollo, resguardo y almacenamiento de la información. Su consulta será pública, gratuita y dispondrá de información en formatos electrónicos y de datos abiertos.\n\nCon la finalidad de validar información fidedigna según su fuente, facilitando consultas y generando información integrada, Guatecompras se interconectará con sistemas de distintas dependencias del Ministerio de Finanzas Públicas y otras entidades públicas, las cuales deberán proporcionar información de forma gratuita sin requerir acuerdos o convenios de cooperación, según lo disponga el ente rector.\n\nNingún servidor público podrá limitar, alterar o restringir la información y registros que se realicen en Guatecompras por constituirse registros públicos de fácil acceso y descarga, salvo cuando se trate de asuntos militares o diplomáticos de seguridad nacional, o de datos suministrados por particulares bajo garantía de confidencialidad al amparo de lo dispuesto en la Constitución Política de la República de Guatemala y la Ley de Acceso a la Información Pública."
+    titleId: "titulo-1"
+
+  - id: "titulo-1-cap-3-art-46"
+    number: "Artículo 46"
+    title: "Obligatoriedad de uso"
+    content: "Todas las entidades obligadas deberán registrar y publicar en Guatecompras la información de los procesos de contratación pública, de conformidad con las condiciones, requisitos y plazos que establece la presente ley, su reglamento y las disposiciones emitidas por el ente rector de Guatecompras.\n\nLa omisión y el incumplimiento en los plazos para el registro y publicación se sancionarán de conformidad con la presente ley y su reglamento."
+    titleId: "titulo-1"
+
+  - id: "titulo-1-cap-3-art-47"
+    number: "Artículo 47"
+    title: "Responsabilidad en el uso de Guatecompras"
+    content: "Guatecompras no prejuzga el contenido ni la validez de la información registrada ni de los documentos publicados por las entidades obligadas, siendo estas las responsables. Por lo tanto, no valida información registrada erróneamente ni la publicación de documentación errónea o con errores en su contenido, así como actos o contratos nulos según la legislación vigente en la República de Guatemala, siendo responsables quienes, elaboren, aporten, suscriban, registren o publiquen información y documentos en Guatecompras.\n\nPara efectos de cualquier solicitud de información o de documentos publicados en Guatecompras, los mismos por ser reproducción directa de dicho sistema, son auténticos, siendo responsables de sus efectos legales, los usuarios que los hubieren suscrito o registrado. Derivado de lo anterior, la información y documentos relacionados con las contrataciones públicas que sean publicados en Guatecompras no requerirán de certificación y tendrán valor probatorio.\n\nTodo usuario de Guatecompras asume la responsabilidad por su uso y la información registrada y publicada por éste. Únicamente podrán estar habilitados como usuarios de Guatecompras, las personas que intervienen en las etapas del proceso de contratación pública de las entidades obligadas que cuenten con certificación en contrataciones públicas vigente."
+    titleId: "titulo-1"
+
+  - id: "titulo-1-cap-3-art-48"
+    number: "Artículo 48"
+    title: "Subsanación de errores en registros y publicaciones en Guatecompras"
+    content: "Las entidades obligadas podrán subsanar en Guatecompras la información registrada o publicada erróneamente, siempre que no contravenga el contenido de los documentos que originaron la información. Dichas subsanaciones deberán realizarse dentro del plazo administrativo pertinente, conforme la presente ley y su reglamento. Guatecompras dejará registro de las subsanaciones realizadas.\n\nEl reglamento de la presente ley desarrollará lo relativo a la aplicación de este artículo."
+    titleId: "titulo-1"
+
+  - id: "titulo-1-cap-3-art-49"
+    number: "Artículo 49"
+    title: "Desarrollo e innovación"
+    content: "El ente rector de Guatecompras promoverá la interoperabilidad y el desarrollo de herramientas tecnológicas necesarias para el registro de la información y publicación de documentos de las contrataciones públicas en cada etapa del proceso. Esto incluirá la incorporación de formularios electrónicos, firma electrónica y firma electrónica avanzada, entre otros."
+    titleId: "titulo-1"
+
+  - id: "titulo-1-cap-3-art-50"
+    number: "Artículo 50"
+    title: "Recursos tecnológicos para el funcionamiento constante de Guatecompras"
+    content: "El Ministerio de Finanzas Públicas procurará el uso de recursos tecnológicos que permitan la disponibilidad de la información de las contrataciones públicas y su consulta en Guatecompras."
+    titleId: "titulo-1"
+
+  - id: "titulo-1-cap-3-art-51"
+    number: "Artículo 51"
+    title: "Tienda virtual y catálogo electrónico"
+    content: "La tienda virtual es una herramienta de Guatecompras facilitadora de la contratación pública a la que podrán acceder las entidades obligadas para adquirir directamente los bienes, suministros o servicios que han sido incluidos en los convenios marco vigentes u otros métodos de contratación pública que puedan ser aplicables. El reglamento de la presente ley definirá los métodos aplicables y el procedimiento para su inclusión.\n\nLa tienda virtual estará estructurada por uno o más catálogos electrónicos como componentes esenciales de la tienda, por medio de los cuales se registrarán las características, precios y condiciones de entrega de los bienes, suministros o servicios, para que las entidades obligadas realicen de forma directa, fácil, eficiente y transparente las compras de los ítems incluidos."
+    titleId: "titulo-1"
 ---
