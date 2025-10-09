@@ -311,4 +311,34 @@ articles:
     title: "Tienda virtual y catálogo electrónico"
     content: "La tienda virtual es una herramienta de Guatecompras facilitadora de la contratación pública a la que podrán acceder las entidades obligadas para adquirir directamente los bienes, suministros o servicios que han sido incluidos en los convenios marco vigentes u otros métodos de contratación pública que puedan ser aplicables. El reglamento de la presente ley definirá los métodos aplicables y el procedimiento para su inclusión.\n\nLa tienda virtual estará estructurada por uno o más catálogos electrónicos como componentes esenciales de la tienda, por medio de los cuales se registrarán las características, precios y condiciones de entrega de los bienes, suministros o servicios, para que las entidades obligadas realicen de forma directa, fácil, eficiente y transparente las compras de los ítems incluidos."
     titleId: "titulo-1"
+
+  - id: "titulo-2-cap-1-art-52"
+    number: "Artículo 52"
+    title: "Autoridades competentes"
+    content: "Son autoridades competentes en el proceso de contratación pública, las siguientes:\n\n**a) Autoridad superior:** Es el órgano unipersonal o colegiado de mayor jerarquía dentro de la entidad obligada con actuaciones específicas dentro de las contrataciones públicas.\n\n**b) Autoridad administrativa:** Es la autoridad de orden superior que se encuentra jerárquicamente subordinada a la autoridad superior y nombrada por este para tal efecto, con funciones y atribuciones administrativas dentro de la entidad obligada.\n\n**c) Autoridad de la unidad ejecutora:** Es la autoridad a cargo de la gestión de las contrataciones públicas de la unidad ejecutora nombrada para tal efecto, jerárquicamente subordinada a la autoridad administrativa de la entidad obligada.\n\nLas autoridades competentes anteriores deben cumplir con las funciones y atribuciones establecidas en la presente ley y su reglamento."
+    titleId: "titulo-2"
+
+  - id: "titulo-2-cap-1-art-53"
+    number: "Artículo 53"
+    title: "Funciones de la autoridad superior"
+    content: "La autoridad superior tendrá las funciones siguientes:\n\n**a)** Aprobar la programación anual de contrataciones y sus modificaciones;\n\n**b)** Suscribir o delegar la suscripción de los contratos y convenios;\n\n**c)** Declarar situaciones de emergencia, urgencia o imprevistos;\n\n**d)** Prescindir de la negociación, cuando corresponda;\n\n**e)** Resolver lo relativo a la terminación anticipada de contratos;\n\n**f)** Aprobar el Manual de Normas y Procedimientos de Contrataciones Públicas;\n\n**g)** Aprobar los procesos de concesión y enajenación de los bienes del Estado;\n\n**h)** Cumplir con las demás disposiciones que estén determinadas de forma específica para dicha autoridad."
+    titleId: "titulo-2"
+
+  - id: "titulo-2-cap-1-art-54"
+    number: "Artículo 54"
+    title: "Funciones de la autoridad administrativa"
+    content: "La autoridad administrativa tendrá funciones relacionadas con:\n\n- Revisar, consolidar y presentar la programación anual de contrataciones\n- Autorizar pliegos de condiciones y modificaciones\n- Nombrar integrantes de comisiones de evaluación y supervisores\n- Resolver excusas y recusaciones\n- Autorizar convocatorias y contrataciones directas\n- Resolver adjudicaciones y readjudicaciones\n- Suscribir o delegar la suscripción de contratos\n- Resolver prórrogas contractuales y subcontrataciones\n- Aprobar liquidaciones y otorgar finiquitos\n- Cumplir con las demás disposiciones establecidas en la ley"
+    titleId: "titulo-2"
+
+  - id: "titulo-2-cap-1-art-55"
+    number: "Artículo 55"
+    title: "Funciones de la autoridad de la unidad ejecutora"
+    content: "La autoridad de la unidad ejecutora tendrá funciones relacionadas con:\n\n- Elaborar y presentar la programación anual de contrataciones\n- Revisar y trasladar pliegos de condiciones\n- Autorizar pliegos en los métodos que le correspondan\n- Autorizar reprogramaciones y prórrogas de plazos\n- Resolver adjudicaciones en los métodos correspondientes\n- Nombrar delegados de evaluación\n- Autorizar nuevas convocatorias y contrataciones directas\n- Suscribir o delegar la suscripción de contratos o actas\n- Informar sobre avances de ejecución\n- Cumplir con las demás disposiciones establecidas en la ley"
+    titleId: "titulo-2"
+
+  - id: "titulo-2-cap-1-art-56"
+    number: "Artículo 56"
+    title: "Casos no previstos"
+    content: "Para los casos no previstos en la presente ley y su reglamento, las actuaciones de las autoridades competentes se realizarán atendiendo el monto estimado de la negociación, de la forma siguiente:\n\n**a)** Cuando el monto estimado exceda de Q.2,000,000.00, le corresponderá a la autoridad superior;\n\n**b)** Cuando el monto estimado se encuentre en el rango de Q.300,000.01 a Q.2,000,000.00, le corresponderá a la autoridad administrativa;\n\n**c)** Cuando el monto estimado no exceda de Q.300,000.00, le corresponderá a la autoridad de la unidad ejecutora.\n\nEstos umbrales serán revisados y actualizados de conformidad con lo establecido en el artículo 80 de la presente ley."
+    titleId: "titulo-2"
 ---
