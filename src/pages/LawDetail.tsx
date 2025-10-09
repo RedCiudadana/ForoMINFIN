@@ -65,27 +65,27 @@ const LawDetail = () => {
       {
         id: 'titulo-1',
         title: 'TÍTULO I – DISPOSICIONES GENERALES',
-        articles: []
+        articles: law.articles.filter((art: any) => art.titleId === 'titulo-1')
       },
       {
         id: 'titulo-2',
         title: 'TÍTULO II – PROCESO DE CONTRATACIÓN PÚBLICA',
-        articles: []
+        articles: law.articles.filter((art: any) => art.titleId === 'titulo-2')
       },
       {
         id: 'titulo-3',
         title: 'TÍTULO III – PROHIBICIONES, INFRACCIONES Y SANCIONES',
-        articles: []
+        articles: law.articles.filter((art: any) => art.titleId === 'titulo-3')
       },
       {
         id: 'titulo-4',
         title: 'TÍTULO IV – RESOLUCIÓN DE CONTROVERSIAS',
-        articles: []
+        articles: law.articles.filter((art: any) => art.titleId === 'titulo-4')
       },
       {
         id: 'titulo-5',
         title: 'TÍTULO V – OTROS TIPOS DE CONTRATACIÓN PÚBLICA',
-        articles: []
+        articles: law.articles.filter((art: any) => art.titleId === 'titulo-5')
       }
     ];
 
