@@ -5,6 +5,7 @@ import Redes2 from '../assets/footer/REDES-02.png';
 import Redes3 from '../assets/footer/REDES-03.png';
 import Redes4 from '../assets/footer/REDES-04.png';
 import Linea from '../assets/footer/LINEA.png';
+import MinfinLogo from '../assets/minfin-logo.png';
 
 const Footer = () => {
   return (
@@ -15,7 +16,7 @@ const Footer = () => {
 
             {/* Logo */}
             <div>
-              <img src="https://www.minfin.gob.gt/images/img_portal/MINFIN-2024-2028_AZUL_01.png" alt="MINFIN Logo" className="h-16 w-auto filter-white"/>
+              <img src={MinfinLogo} alt="MINFIN Logo" className="h-16 w-auto filter-white"/>
               <p className='mt-8'>Esta es una herramienta facilitada por:</p>
               <img className="h-8 w-auto filter-white " src="https://www.redciudadana.org/assets/img/red/LOGO-RED_NEGRO.png" alt="Red Ciudadana Logo"/>
             </div>

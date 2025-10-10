@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import MinfinLogo from '../assets/minfin-logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,7 +61,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3 group my-4">
-              <img className="h-16 w-auto my-4" src="https://www.minfin.gob.gt/images/img_portal/MINFIN-2024-2028_AZUL_01.png" alt="MINFIN Logo"/>        
+              <img className="h-16 w-auto my-4" src={MinfinLogo} alt="MINFIN Logo"/>
             </Link>
           </div>
 
