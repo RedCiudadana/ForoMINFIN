@@ -143,10 +143,10 @@ const Calendar = () => {
           <CalendarIcon className="h-8 w-8 text-blue-600" />
         </div>
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Calendario del Proceso Participativo
+          Proceso de elaboración
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Conoce las fases del proceso legislativo y los eventos donde puedes participar
+          Conoce las fases del proceso de elaboración de la nueva Ley de Contrataciones Públicas.
         </p>
       </div>
 

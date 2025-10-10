@@ -12,7 +12,7 @@ const Header = () => {
   const navigation = [
     { name: 'Inicio', href: '/' },
     { name: 'El Proyecto', href: '/ley/contrataciones-estado' },
-    { name: 'Calendario', href: '/calendario' },
+    { name: 'Proceso', href: '/calendario' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
