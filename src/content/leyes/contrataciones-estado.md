@@ -366,18 +366,6 @@ articles:
     content: "El supervisor de obra es el profesional designado para fiscalizar y controlar la ejecución de obras públicas, verificando el cumplimiento de especificaciones técnicas, plazos y presupuestos.\n\nDebe ser ingeniero o arquitecto colegiado activo con experiencia en supervisión de obras. Sus funciones incluyen:\n\n- Controlar la calidad de materiales y ejecución\n- Autorizar avances y pagos\n- Elaborar informes técnicos\n- Aprobar modificaciones técnicas menores\n- Participar en recepción provisional y definitiva"
     titleId: "titulo-2"
 
-  - id: "titulo-2-cap-3-art-65"
-    number: "Artículo 65"
-    title: "Etapas del proceso de contratación pública"
-    content: "El proceso de contratación pública comprende las siguientes etapas:\n\n**a) Etapa preparatoria:** Planificación, programación y elaboración de estudios previos.\n\n**b) Etapa precontractual:** Comprende desde la convocatoria hasta la adjudicación o declaratoria de proceso desierto.\n\n**c) Etapa contractual:** Perfeccionamiento y formalización del contrato público.\n\n**d) Etapa de ejecución:** Cumplimiento de obligaciones contractuales hasta la liquidación y finiquito.\n\nCada etapa debe cumplir con los requisitos, plazos y procedimientos establecidos en esta ley y su reglamento."
-    titleId: "titulo-2"
-
-  - id: "titulo-2-cap-3-art-66"
-    number: "Artículo 66"
-    title: "Programación anual de contrataciones"
-    content: "Las entidades obligadas deben elaborar una programación anual de contrataciones que incluya todas las adquisiciones de obras, bienes, suministros y servicios que planifiquen ejecutar durante el ejercicio fiscal.\n\nLa programación debe contener:\n\n- Descripción del objeto contractual\n- Monto estimado\n- Método de contratación a utilizar\n- Fuente de financiamiento\n- Cronograma de ejecución\n- Unidad ejecutora responsable\n\nDebe ser aprobada por la autoridad superior antes del 31 de enero de cada año y publicada en Guatecompras. Puede ser modificada durante el año por causas justificadas."
-    titleId: "titulo-2"
-
   - id: "titulo-2-cap-2-art-61"
     number: "Artículo 61"
     title: "Requisitos de los supervisores"
