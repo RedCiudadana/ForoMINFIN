@@ -164,13 +164,7 @@ const Home = () => {
                             {stat.label}
                           </h3>
                           <p className="text-gray-600 text-sm mb-2">{stat.description}</p>
-                          <span className={`text-xs font-medium px-2 py-1 rounded-full ${
-                            stat.color === 'blue' ? 'bg-blue-50 text-blue-800' :
-                            stat.color === 'green' ? 'bg-green-50 text-green-700' :
-                            stat.color === 'orange' ? 'bg-orange-50 text-orange-700' : 'bg-purple-50 text-purple-700'
-                          }`}>
-                            {stat.trend}
-                          </span>
+                          
                         </div>
                       </AnimatedSection>
                     ))}
