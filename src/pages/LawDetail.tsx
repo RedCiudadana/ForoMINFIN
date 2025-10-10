@@ -315,16 +315,16 @@ const LawDetail = () => {
                               <div
                                 key={article.id}
                                 id={`article-${article.id}`}
-                                className={`p-4 rounded-lg border transition-all scroll-mt-24 ${
+                                className={`p-6 rounded-lg border transition-all scroll-mt-24 ${
                                   isArticleSelected ? 'border-blue-300 bg-blue-50' : 'border-gray-200 hover:border-gray-300'
                                 }`}
                               >
-                                <h4 className="font-semibold text-gray-900 mb-2">
+                                <h4 className="font-semibold text-gray-900 mb-3 text-lg">
                                   {article.number}: {article.title}
                                 </h4>
-                                <p className="text-gray-700 text-sm mb-3 leading-relaxed">
+                                <div className="text-gray-700 mb-4 leading-relaxed prose prose-sm max-w-none article-content">
                                   <ReactMarkdown>{article.content}</ReactMarkdown>
-                                </p>
+                                </div>
 
                                 <div className="flex items-center space-x-4">
                                   <button

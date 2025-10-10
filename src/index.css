@@ -34,3 +34,57 @@ h1, h2, h3, h4, h5, h6 {
 .filter-white{
   filter: brightness(0) invert(1);
 }
+
+/* Estilos para el contenido de artículos */
+.article-content {
+  text-align: justify;
+  hyphens: auto;
+}
+
+.article-content p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.article-content p:last-child {
+  margin-bottom: 0;
+}
+
+.article-content strong {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.article-content ul,
+.article-content ol {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+}
+
+.article-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+.article-content li p {
+  margin-bottom: 0.5rem;
+}
+
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.article-content blockquote {
+  border-left: 3px solid #3b82f6;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+  color: #4b5563;
+}
