@@ -12,7 +12,7 @@ interface TimelinePhase {
 }
 
 const InteractiveTimeline = () => {
-  const [selectedPhase, setSelectedPhase] = useState<number | null>(2);
+  const [selectedPhase, setSelectedPhase] = useState<number | null>(0);
 
   const phases: TimelinePhase[] = [
     {
@@ -37,7 +37,7 @@ const InteractiveTimeline = () => {
         'Remisión de matriz de insumos a entidades compradoras.',
         'Reuniones para conocer experiencias de otros países (Chile, Paraguay, Perú, Costa Rica, Panamá y República Dominicana).'
       ],
-      status: 'current',
+      status: 'completed',
       icon: MessageCircleMore,
       color: 'blue'
     },
@@ -51,7 +51,7 @@ const InteractiveTimeline = () => {
         'Redacción del articulado.',
         'Revisión y discusión con experto internacional.'
       ],
-      status: 'current',
+      status: 'completed',
       icon: MessageCircleMore,
       color: 'blue'
     },
@@ -66,7 +66,7 @@ const InteractiveTimeline = () => {
         'Revisión técnico-jurídica.',
         'Validación con expertos.'
       ],
-      status: 'upcoming',
+      status: 'completed',
       icon: Clock,
       color: 'blue'
     }
@@ -115,11 +115,11 @@ const InteractiveTimeline = () => {
           return (
             <div key={phase.id} className="relative flex items-center">
               {/* Timeline Dot */}
-              <div className={`absolute left-8 md:left-1/2 w-4 h-4 rounded-full transform md:-translate-x-1/2 ${styles.dot} border-4 border-white shadow-lg z-10`}>
+              {/* <div className={`absolute left-8 md:left-1/2 w-4 h-4 rounded-full transform md:-translate-x-1/2 ${styles.dot} border-4 border-white shadow-lg z-10`}>
                 {phase.status === 'completed' && (
                   <CheckCircle className="absolute inset-0 w-4 h-4 text-white" />
                 )}
-              </div>
+              </div> */}
               
               {/* Content Card */}
               <div className={`ml-20 md:ml-0 ${index % 2 === 0 ? 'md:mr-1/2 md:pr-12' : 'md:ml-1/2 md:pl-12'} w-full md:w-auto`}>

@@ -8,22 +8,22 @@ const TopBar = () => {
   const socialLinks = [
     {
       name: 'Facebook',
-      url: 'https://www.facebook.com/Redciudadanagt',
+      url: 'https://www.facebook.com/MinfinGT/',
       icon: Redes1
     },
     {
       name: 'Twitter',
-      url: 'https://twitter.com/redxguate',
+      url: 'https://x.com/MinFinGT',
       icon: Redes2
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/redxguate/',
+      url: 'https://www.instagram.com/minfingt/',
       icon: Redes3
     },
     {
       name: 'YouTube',
-      url: 'https://www.youtube.com/channel/UCQwc62j7beStZYFzwPxBEQg',
+      url: 'https://www.youtube.com/user/minfingt',
       icon: Redes4
     }
   ];
@@ -35,7 +35,7 @@ const TopBar = () => {
           {/* Left side - Organization info */}
           <div className="flex items-center space-x-4">
             <span className="text-gray-300">
-              Participa! Una herramienta de Red Ciudadana
+              Participa! Una herramienta de <a href='https://www.redciudadana.org/' className='hover' target="_blank">Red Ciudadana</a>
             </span>
           </div>
 
@@ -57,7 +57,7 @@ const TopBar = () => {
                   <img 
                     src={social.icon} 
                     alt={social.name}
-                    className="h-6 w-6"
+                    className="h-7 w-7"
                   />
                 </a>
               ))}

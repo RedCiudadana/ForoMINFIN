@@ -37,9 +37,6 @@ const Footer = () => {
                 <div className="text-sm text-white">
                   8a. Avenida 20-59 Zona 1, Centro Cívico, Guatemala - 01001
                 </div>
-                <div className="text-xs text-gray-300">
-                  Ultima Actualización: Jueves 25 Septiembre 2025, 16:11:15.
-                </div>
               </div>
             </div>
 
@@ -73,16 +70,16 @@ const Footer = () => {
               <h3 className="text-lg font-semibold mb-4">Síguenos</h3>
               <div className="flex space-x-4">
                 <a href="https://www.facebook.com/MinfinGT/" target='_blank' className="text-white hover:text-blue-400 transition-colors">
-                  <img src={Redes1} className="h-10 w-10" />
+                  <img src={Redes1} className="h-12 w-12" />
                 </a>
                 <a href="https://x.com/MinFinGT" target='_blank' className="text-white hover:text-blue-400 transition-colors">
-                  <img src={Redes2} className="h-10 w-10" />
+                  <img src={Redes2} className="h-12 w-12" />
                 </a>
                 <a href="https://www.instagram.com/minfingt/" target='_blank' className="text-white hover:text-red-400 transition-colors">
-                  <img src={Redes3} className="h-10 w-10" />
+                  <img src={Redes3} className="h-12 w-12" />
                 </a>
                 <a href="https://www.youtube.com/user/minfingt" target='_blank' className="text-white hover:text-red-400 transition-colors">
-                  <img src={Redes4} className="h-10 w-10" />
+                  <img src={Redes4} className="h-12 w-12" />
                 </a>
               </div>
             </div>
@@ -102,13 +99,6 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <div>
-        <div className="bg-white text-center py-2">
-          <p className="text-lg my-6">
-            Asociación Civil Red Ciudadana 2025
-          </p>
-        </div>
-      </div>
     </>
   );
 };
