@@ -4,7 +4,7 @@ shortDescription: "Modernización integral del sistema de contrataciones públic
 fullDescription: "Este proyecto busca transformar el sistema nacional de contrataciones públicas, incorporando la contratación electrónica como pilar fundamental para crear transparencia, eficiencia y ahorros, mayor concurrencia y competencia, estandarización de procesos a través de formularios electrónicos y certeza jurídica. Cualquier duda o comentario puedes comunicarte al correo: nraxon@minfin.gob.gt"
 icon: "shield"
 color: "green"
-pdfUrl: "/docs/reformas-contrataciones-estado.pdf"
+pdfUrl: "https://redciudadana.github.io/RecursosParticipaYa/minfin_2025/ley_contrataciones_publicas.pdf"
 articles:
   - id: "titulo-1-cap-1-art-1"
     number: "Artículo 1"
