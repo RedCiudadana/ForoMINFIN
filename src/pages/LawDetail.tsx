@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Download, MessageSquare, Filter, Eye, EyeOff, ChevronDown, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Download, MessageSquare, Filter, Eye, EyeOff, ChevronDown, ChevronRight, Loader2 } from 'lucide-react';
 import { getLawById } from '../data/laws';
 import { useComments } from '../hooks/useComments';
 import CommentSection from '../components/CommentSection';
@@ -18,6 +18,7 @@ const LawDetail = () => {
   const [showCommentForm, setShowCommentForm] = useState(false);
   const [selectedChapter, setSelectedChapter] = useState<string | null>(null);
   const [expandedChapters, setExpandedChapters] = useState<Set<string>>(new Set());
+  const [downloadingPdf, setDownloadingPdf] = useState(false);
 
   // Hooks for different comment sections
   const { addComment: addGeneralComment, loading: generalLoading } = useComments(lawId!, undefined, true);
@@ -123,16 +124,33 @@ const LawDetail = () => {
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">{law.title}</h1>
           <p className="text-lg text-gray-700 mb-6">{law.fullDescription}</p>
+          <p className="text-lg text-gray-700 mb-6">AVISO IMPORTANTE: Esta herramienta estará disponible hasta el mediodía (12:00 p.m.) del 24 de octubre de 2025.</p>
           
           <div className="flex flex-col sm:flex-row gap-4 items-start">
             <a
               href={law.pdfUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center bg-blue-800 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition-colors"
+              download
+              onClick={() => {
+                setDownloadingPdf(true);
+                window.setTimeout(() => setDownloadingPdf(false), 6000);
+              }}
+              className={`inline-flex items-center px-6 py-3 rounded-lg transition-colors text-white ${
+                downloadingPdf ? 'bg-blue-700 cursor-wait' : 'bg-blue-800 hover:bg-blue-800'
+              }`}
             >
-              <Download className="h-5 w-5 mr-2" />
-              Descargar PDF completo
+              {downloadingPdf ? (
+                <>
+                  <Loader2 className="h-5 w-5 mr-2 animate-spin" />
+                  Abriendo PDF...
+                </>
+              ) : (
+                <>
+                  <Download className="h-5 w-5 mr-2" />
+                  Descargar PDF completo
+                </>
+              )}
             </a>
           </div>
         </div>

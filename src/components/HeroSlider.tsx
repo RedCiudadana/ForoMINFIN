@@ -9,6 +9,7 @@ interface Slide {
   subtitle: string;
   description1: string;
   description2: string;
+  description3?: string;
   image: string;
   ctaText: string;
   ctaLink: string;
@@ -32,6 +33,7 @@ const HeroSlider = () => {
       subtitle: 'Contrataciones Públicas',
       description1: 'El Ministerio de Finanzas Públicas, te invita a participar en la transformación más importante del Sistema Nacional de Contrataciones Públicas del Estado guatemalteco.',
       description2: 'Tus comentarios y sugerencias nos ayudarán a crear un marco legal más transparente, eficiente y moderno.',
+      description3: 'AVISO IMPORTANTE: Esta herramienta estará disponible hasta el mediodía (12:00 p.m.) del 24 de octubre de 2025.',
       image: Slider1,
       ctaText: 'Participa Ahora',
       ctaLink: '/ley/contrataciones-estado',
@@ -111,6 +113,10 @@ const HeroSlider = () => {
 
                 <p className="text-xl sm:text-2xl text-blue-100 leading-relaxed max-w-2xl">
                   {currentSlideData.description2}
+                </p>
+
+                <p className="text-xl sm:text-2xl text-blue-100 leading-relaxed max-w-2xl">
+                  {currentSlideData.description3}
                 </p>
               </div>
 
