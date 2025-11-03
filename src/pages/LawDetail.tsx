@@ -271,27 +271,6 @@ const LawDetail = () => {
         <div className={activeTab === 'articles' ? 'lg:col-span-3' : 'lg:col-span-4'}>
           {activeTab === 'articles' ? (
             <div>
-              {/* General Comment Form Toggle */}
-              <div className="mb-6 flex justify-end">
-                <button
-                  onClick={() => setShowCommentForm(!showCommentForm)}
-                  className="inline-flex items-center px-4 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-800 transition-colors"
-                >
-                  {showCommentForm ? <EyeOff className="h-4 w-4 mr-2" /> : <Eye className="h-4 w-4 mr-2" />}
-                  {showCommentForm ? 'Ocultar formulario' : 'Comentar ley completa'}
-                </button>
-              </div>
-
-              {/* General Comment Form */}
-              {showCommentForm && (
-                <div className="mb-8">
-                  <CommentForm
-                    onSubmit={handleGeneralCommentSubmit}
-                    isGeneral={true}
-                    loading={generalLoading}
-                  />
-                </div>
-              )}
 
               {/* Articles by Title */}
               <div className="space-y-8">
@@ -327,7 +306,7 @@ const LawDetail = () => {
                       </button>
 
                       {isExpanded && chapter.articles.length > 0 && (
-                        <div className="border-t border-gray-200 p-6 space-y-4">
+                        <div className="border-gray-200 p-6 space-y-4">
                           {chapter.articles.map((article) => {
                             const isArticleSelected = selectedArticle === article.id;
 
@@ -353,19 +332,10 @@ const LawDetail = () => {
                                   >
                                     {isArticleSelected ? 'Cerrar comentarios' : 'Ver comentarios'}
                                   </button>
-
-                                  <button
-                                    onClick={() => {
-                                      setSelectedArticle(article.id);
-                                    }}
-                                    className="text-green-600 hover:text-green-800 font-medium text-sm transition-colors"
-                                  >
-                                    Comentar artículo
-                                  </button>
                                 </div>
 
                                 {isArticleSelected && (
-                                  <div className="mt-4 border-t border-gray-200 pt-4">
+                                  <div className="mt-4border-gray-200 pt-4">
                                     <CommentForm
                                       onSubmit={handleArticleCommentSubmit}
                                       loading={articleLoading}
