@@ -29,16 +29,25 @@ Este proyecto es una plataforma web para la participación ciudadana en la revis
    ```
    VITE_SUPABASE_URL=tu_url_supabase
    VITE_SUPABASE_ANON_KEY=tu_anon_key_supabase
-   VITE_RECAPTCHA_SITE_KEY=tu_site_key_recaptcha
    ```
 
-4. **Ejecuta el proyecto en modo desarrollo:**
+4. **Crear ejecutable del proyecto:**
 
    ```sh
-   npm run dev
+   npm run build
    ```
 
-   Accede a [http://localhost:5173](http://localhost:5173) en tu navegador.
+   Crea carpeta dist en el directorio del proyecto que es la que se debe copiar.
+
+5. **Copiar contenido a carpeta de nginx**
+
+   En el directorio base de nginx borrar el contenido actual y copiar la nueva carpeta dist del proyecto.
+
+   Asegurarse que el archivo .env este en un lugar seguro para poder copiar posteriormente y poder hacer uso de él.
+
+5. **Reiniciar servidor de nginx**
+
+   Una vez se tiene el nuevo contenido se puede reiniciar el servidor de nginx para poder observar los nuevos cambios.
 
 ## Scripts principales
 
