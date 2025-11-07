@@ -35,7 +35,7 @@ const HeroSlider = () => {
       description2: 'Tus comentarios y sugerencias nos ayudarán a crear un marco legal más transparente, eficiente y moderno.',
       description3: 'AVISO IMPORTANTE: Esta herramienta estará disponible hasta el mediodía (12:00 p.m.) del 24 de octubre de 2025.',
       image: Slider1,
-      ctaText: 'Participa Ahora',
+      ctaText: 'Ver Comentarios',
       ctaLink: '/ley/contrataciones-estado',
       secondaryCtaText: 'Ver Video Explicativo',
       secondaryCtaLink: '/calendario'
