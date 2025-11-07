@@ -370,7 +370,7 @@ const Home = () => {
                 to="/ley/contrataciones-estado"
                 className="group bg-blue-800 hover:bg-blue-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 hover:shadow-xl"
               >
-                Comenzar a Participar
+                Ver Comentarios
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
