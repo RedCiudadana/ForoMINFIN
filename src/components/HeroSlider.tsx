@@ -35,7 +35,7 @@ const HeroSlider = () => {
       description2: 'Los comentarios y sugerencias que recibimos a través de esta herramienta (durante el tiempo que estuvo disponible), nos ayudaron a crear una propuesta de marco legal más transparente, eficiente y moderno.',
       description3: '',
       image: Slider1,
-      ctaText: 'Ver Comentarios',
+      ctaText: 'Ver Documentos',
       ctaLink: '/ley/contrataciones-estado',
       secondaryCtaText: 'Ver Video Explicativo',
       secondaryCtaLink: '/calendario'
