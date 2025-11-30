@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CheckCircle, Clock, Calendar, Users, FileText, Presentation, MessageCircleMore } from 'lucide-react';
+import { CheckCircle, Clock, Calendar, Users, FileText, Presentation, MessageCircleMore, Download } from 'lucide-react';
 
 interface TimelinePhase {
   id: number;
@@ -9,6 +9,7 @@ interface TimelinePhase {
   status: 'completed' | 'current' | 'upcoming';
   icon: React.ComponentType<any>;
   color: string;
+  downloadLink?: string;
 }
 
 const InteractiveTimeline = () => {
@@ -69,6 +70,21 @@ const InteractiveTimeline = () => {
       status: 'completed',
       icon: Clock,
       color: 'blue'
+    },
+    {
+      id: 5,
+      title: 'Fase de Presentación de la Propuesta',
+      description: 'Presentación de la iniciativa de ley ante el Congreso de la República.',
+      details: [
+        'Revisión final de la propuesta',
+        'Emisión de dictámenes para expediente de iniciativa de ley',
+        'Presentación de iniciativa de ley ante el Congreso de la República',
+        'Conocimiento de la iniciativa por el Pleno del Congreso de la República y traslado a la Comisión de Economía y Comercio Exterior para su estudio y dictamen correspondiente'
+      ],
+      status: 'current',
+      icon: Presentation,
+      color: 'blue',
+      downloadLink: '/files/iniciativa_ley_contrataciones.pdf'
     }
   ];
 
@@ -147,7 +163,7 @@ const InteractiveTimeline = () => {
                   
                   {/* Expandable Details */}
                   <div className={`transition-all duration-500 overflow-hidden ${
-                    isSelected ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    isSelected ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
                   }`}>
                     <div className="border-t border-gray-200 pt-4 mt-4">
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Actividades principales:</h4>
@@ -159,6 +175,21 @@ const InteractiveTimeline = () => {
                           </div>
                         ))}
                       </div>
+
+                      {/* Download Button */}
+                      {phase.downloadLink && (
+                        <div className="mt-4 pt-4 border-t border-gray-200">
+                          <a
+                            href={phase.downloadLink}
+                            download
+                            onClick={(e) => e.stopPropagation()}
+                            className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium text-sm"
+                          >
+                            <Download className="h-4 w-4 mr-2" />
+                            Descargar Iniciativa de Ley (PDF)
+                          </a>
+                        </div>
+                      )}
                     </div>
                   </div>
                   
