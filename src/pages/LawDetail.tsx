@@ -148,7 +148,7 @@ const LawDetail = () => {
               ) : (
                 <>
                   <Download className="h-5 w-5 mr-2" />
-                  Descargar PDF completo
+                  Descargar propuesta inicial
                 </>
               )}
             </a>
