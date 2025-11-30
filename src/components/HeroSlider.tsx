@@ -133,35 +133,6 @@ const HeroSlider = () => {
               </div>
             </div>
 
-            {/* Visual Element */}
-            <div className="hidden lg:block">
-              <div className="relative">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="bg-blue-800 rounded-full p-3">
-                        <MessageSquare className="h-6 w-6 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-white font-semibold">Participación Activa</h3>
-                        <p className="text-blue-200 text-sm">Tu opinión cuenta en cada artículo</p>
-                      </div>
-                    </div>
-                    
-                    
-                    <div className="flex items-center space-x-4">
-                      <div className="bg-green-500 rounded-full p-3">
-                        <Calendar className="h-6 w-6 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-white font-semibold">Proceso Transparente</h3>
-                        <p className="text-blue-200 text-sm">Seguimiento en tiempo real</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
