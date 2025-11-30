@@ -1,7 +1,7 @@
 ---
 title: "Proyecto de Ley de Contrataciones Públicas"
 shortDescription: "Modernización integral del sistema de contrataciones públicas con transparencia, digitalización y fortalecimiento de la competencia"
-fullDescription: "Este proyecto busca transformar el sistema nacional de contrataciones públicas, incorporando la contratación electrónica como pilar fundamental para crear transparencia, eficiencia y ahorros, mayor concurrencia y competencia, estandarización de procesos a través de formularios electrónicos y certeza jurídica.\n\nAVISO IMPORTANTE: Esta herramienta estará disponible hasta el mediodía (12:00 p.m.) del 24 de octubre de 2025."
+fullDescription: "Este proyecto busca transformar el sistema nacional de contrataciones públicas, incorporando la contratación electrónica como pilar fundamental para crear transparencia, eficiencia y ahorros, mayor concurrencia y competencia, estandarización de procesos a través de formularios electrónicos y certeza jurídica."
 icon: "shield"
 color: "green"
 pdfUrl: "/files/ley_contrataciones_publicas.pdf"
