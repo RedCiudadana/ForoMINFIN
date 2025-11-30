@@ -19,6 +19,7 @@ const LawDetail = () => {
   const [selectedChapter, setSelectedChapter] = useState<string | null>(null);
   const [expandedChapters, setExpandedChapters] = useState<Set<string>>(new Set());
   const [downloadingPdf, setDownloadingPdf] = useState(false);
+  const [downloadingMatrix, setDownloadingMatrix] = useState(false);
 
   // Hooks for different comment sections
   const { addComment: addGeneralComment, loading: generalLoading } = useComments(lawId!, undefined, true);
@@ -149,6 +150,32 @@ const LawDetail = () => {
                 <>
                   <Download className="h-5 w-5 mr-2" />
                   Descargar propuesta inicial
+                </>
+              )}
+            </a>
+
+            <a
+              href="/files/matriz_comentarios.xlsx"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              onClick={() => {
+                setDownloadingMatrix(true);
+                window.setTimeout(() => setDownloadingMatrix(false), 6000);
+              }}
+              className={`inline-flex items-center px-6 py-3 rounded-lg transition-colors text-white ${
+                downloadingMatrix ? 'bg-green-700 cursor-wait' : 'bg-green-800 hover:bg-green-900'
+              }`}
+            >
+              {downloadingMatrix ? (
+                <>
+                  <Loader2 className="h-5 w-5 mr-2 animate-spin" />
+                  Abriendo archivo...
+                </>
+              ) : (
+                <>
+                  <Download className="h-5 w-5 mr-2" />
+                  Descargar Matriz de comentarios de socialización de la propuesta inicial
                 </>
               )}
             </a>
