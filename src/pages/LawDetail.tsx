@@ -20,6 +20,7 @@ const LawDetail = () => {
   const [expandedChapters, setExpandedChapters] = useState<Set<string>>(new Set());
   const [downloadingPdf, setDownloadingPdf] = useState(false);
   const [downloadingMatrix, setDownloadingMatrix] = useState(false);
+  const [downloadingInitiative, setDownloadingInitiative] = useState(false);
 
   // Hooks for different comment sections
   const { addComment: addGeneralComment, loading: generalLoading } = useComments(lawId!, undefined, true);
@@ -176,6 +177,32 @@ const LawDetail = () => {
                 <>
                   <Download className="h-5 w-5 mr-2" />
                   Descargar Matriz de comentarios de socialización de la propuesta inicial
+                </>
+              )}
+            </a>
+
+            <a
+              href="/files/iniciativa_ley_6688.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              onClick={() => {
+                setDownloadingInitiative(true);
+                window.setTimeout(() => setDownloadingInitiative(false), 6000);
+              }}
+              className={`inline-flex items-center px-6 py-3 rounded-lg transition-colors text-white ${
+                downloadingInitiative ? 'bg-purple-700 cursor-wait' : 'bg-purple-800 hover:bg-purple-900'
+              }`}
+            >
+              {downloadingInitiative ? (
+                <>
+                  <Loader2 className="h-5 w-5 mr-2 animate-spin" />
+                  Abriendo PDF...
+                </>
+              ) : (
+                <>
+                  <Download className="h-5 w-5 mr-2" />
+                  Descargar Iniciativa de Ley 6688
                 </>
               )}
             </a>
