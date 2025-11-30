@@ -29,11 +29,11 @@ const HeroSlider = () => {
   const slides: Slide[] = [
     {
       id: 'main',
-      title: 'Participa en la Modernización de las',
+      title: 'Conoce el Proceso de Modernización de las',
       subtitle: 'Contrataciones Públicas',
-      description1: 'El Ministerio de Finanzas Públicas, te invita a participar en la transformación más importante del Sistema Nacional de Contrataciones Públicas del Estado guatemalteco.',
-      description2: 'Tus comentarios y sugerencias nos ayudarán a crear un marco legal más transparente, eficiente y moderno.',
-      description3: 'AVISO IMPORTANTE: Esta herramienta estará disponible hasta el mediodía (12:00 p.m.) del 24 de octubre de 2025.',
+      description1: 'El Ministerio de Finanzas Públicas, te invita a conocer y dar seguimiento a la transformación del Sistema Nacional de Contrataciones Públicas del Estado guatemalteco.',
+      description2: 'Los comentarios y sugerencias que recibimos a través de esta herramienta (durante el tiempo que estuvo disponible), nos ayudaron a crear una propuesta de marco legal más transparente, eficiente y moderno.',
+      description3: '',
       image: Slider1,
       ctaText: 'Ver Comentarios',
       ctaLink: '/ley/contrataciones-estado',
