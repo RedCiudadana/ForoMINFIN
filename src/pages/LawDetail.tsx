@@ -126,8 +126,7 @@ const LawDetail = () => {
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">{law.title}</h1>
           <p className="text-lg text-gray-700 mb-6">{law.fullDescription}</p>
-          <p className="text-lg text-gray-700 mb-6">AVISO IMPORTANTE: Esta herramienta estará disponible hasta el mediodía (12:00 p.m.) del 24 de octubre de 2025.</p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 items-start">
             <a
               href={law.pdfUrl}
